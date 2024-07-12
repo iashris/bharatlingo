@@ -2,6 +2,8 @@ import { useRef, forwardRef, useImperativeHandle } from "react";
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 
+const isLocalhost = window.location.hostname === "localhost";
+
 const MinimalYouTubeSectionPlayer = forwardRef<
   {
     playSection: () => void;
@@ -55,7 +57,12 @@ const MinimalYouTubeSectionPlayer = forwardRef<
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
       <div className="relative">
-        <YouTube videoId={videoId} opts={opts} onReady={onReady} />
+        <YouTube
+          videoId={videoId}
+          opts={opts}
+          onReady={onReady}
+          className={isLocalhost ? null : "pointer-events-none"}
+        />
       </div>
       <button
         onClick={playSection}

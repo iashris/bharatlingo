@@ -15,7 +15,10 @@ const convertTimeToSeconds = (time: string | number): number => {
 const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   song: songObject,
 }) => {
-  const { song, videoId, name: songName } = songObject;
+  const { song, videoId, name: songName, introduction } = songObject;
+  const [showIntroduction, setShowIntroduction] = useState(
+    Boolean(introduction)
+  );
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [completedLines, setCompletedLines] = useState<boolean[]>(
     new Array(song.length).fill(false)
@@ -29,25 +32,27 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
 
     if (index < song.length - 1) {
       setCurrentLineIndex(index + 1);
-      // Play the video section for the next line after a short delay
-      setTimeout(() => {
-        playerRef.current?.playSection();
-      }, 1000); // 1 second delay
+      playerRef.current?.playSection();
     }
   };
 
   const handlePrevious = () => {
     if (currentLineIndex > 0) {
       setCurrentLineIndex(currentLineIndex - 1);
+      playerRef.current?.playSection();
     }
   };
 
   const handleNext = () => {
-    if (
+    if (showIntroduction) {
+      setShowIntroduction(false);
+      playerRef.current?.playSection();
+    } else if (
       currentLineIndex < song.length - 1 &&
       completedLines[currentLineIndex]
     ) {
       setCurrentLineIndex(currentLineIndex + 1);
+      playerRef.current?.playSection();
     }
   };
 
@@ -65,29 +70,41 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
         videoId={videoId}
         ref={playerRef}
       />
-      <LanguageLearningComponent
-        key={currentLineIndex}
-        title={song[currentLineIndex]}
-        correctOrder={song[currentLineIndex].correctOrder}
-        alternative={song[currentLineIndex].alternative}
-        trivia={song[currentLineIndex].trivia}
-        onComplete={() => handleComplete(currentLineIndex)}
-      />
-      <div className="flex justify-between mt-6">
-        <Button
-          icon={<LeftOutlined />}
-          onClick={handlePrevious}
-          disabled={currentLineIndex === 0}
-        />
-        <Button
-          icon={<RightOutlined />}
-          onClick={handleNext}
-          disabled={
-            currentLineIndex === song.length - 1 ||
-            !completedLines[currentLineIndex]
-          }
-        />
-      </div>
+      {showIntroduction ? (
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold mb-4">Introduction</h2>
+          <p className="mb-4">{introduction}</p>
+          <Button onClick={handleNext} className="w-full">
+            Proceed to Challenges
+          </Button>
+        </div>
+      ) : (
+        <>
+          <LanguageLearningComponent
+            key={currentLineIndex}
+            title={song[currentLineIndex]}
+            correctOrder={song[currentLineIndex].correctOrder}
+            alternative={song[currentLineIndex].alternative}
+            trivia={song[currentLineIndex].trivia}
+            onComplete={() => handleComplete(currentLineIndex)}
+          />
+          <div className="flex justify-between mt-6">
+            <Button
+              icon={<LeftOutlined />}
+              onClick={handlePrevious}
+              disabled={currentLineIndex === 0}
+            />
+            <Button
+              icon={<RightOutlined />}
+              onClick={handleNext}
+              disabled={
+                currentLineIndex === song.length - 1 ||
+                !completedLines[currentLineIndex]
+              }
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };

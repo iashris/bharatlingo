@@ -30,4 +30,5 @@ export type YouTubeFillBlanksActivity = {
   song: SongLine[];
   videoId: string;
   name: string;
+  introduction?: string;
 };
