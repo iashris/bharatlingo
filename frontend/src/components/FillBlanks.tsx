@@ -14,9 +14,10 @@ interface LanguageLearningComponentProps {
     BN: string;
   };
   correctOrder: string[];
-  alternative?: string[];
+  alternative?: string[][] | string[];
   audio?: string;
   onComplete?: () => void;
+  onSubmit?: (correct: boolean) => void;
   trivia?: string;
 }
 
@@ -25,6 +26,7 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
   correctOrder,
   audio,
   onComplete,
+  onSubmit,
   alternative,
   trivia,
 }) => {
@@ -58,7 +60,14 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
     const isOrderCorrect =
       JSON.stringify(submittedOrder) === JSON.stringify(correctOrder) ||
       (alternative &&
-        JSON.stringify(submittedOrder) === JSON.stringify(alternative));
+        Array.isArray(alternative) &&
+        JSON.stringify(submittedOrder) === JSON.stringify(alternative)) ||
+      (alternative &&
+        alternative.some(
+          (alt) => JSON.stringify(submittedOrder) === JSON.stringify(alt)
+        ));
+
+    onSubmit?.(Boolean(isOrderCorrect));
 
     if (isOrderCorrect) {
       message.success("Correct!");
@@ -91,8 +100,30 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
     (option) => !selectedWords.some((selected) => selected.id === option.id)
   );
 
+  const renderTriviaWithLinks = (trivia: string) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = trivia.split(urlRegex);
+
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
       <div className="flex items-center mb-4">
         {audio && (
           <Button
@@ -135,9 +166,9 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
           </Button>
         ))}
       </div>
-      {showTrivia && (
+      {showTrivia && trivia && (
         <div className="mb-4 p-4 bg-gray-100 rounded-md">
-          <p className="text-gray-600">{trivia}</p>
+          <p className="text-gray-600">{renderTriviaWithLinks(trivia)}</p>
         </div>
       )}
       <div className="flex justify-between mb-4">

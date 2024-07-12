@@ -1,0 +1,164 @@
+{
+  "name": "Ami tomaro sange",
+  "videoId": "sFdDxKaGzs8",
+  "introduction": "Penned by Rabindranath Tagore in March 1939 spring at the age of 77, this song was dedicated to Amita Sen (mother of Amartya Sen), who Tagore regarded as a daughter.",
+  "song": [
+    {
+      "BN": "আমি তোমার সঙ্গে বেঁধেছি আমার প্রাণ",
+      "EN": "ami tomaro sange bendhechi amaro praan",
+      "correctOrder": ["I", "have", "tied", "my", "life", "with", "you"],
+      "alternative": ["I", "have", "tied", "with", "you", "my", "life"],
+      "trivia": "",
+      "start": 9.709983000000001,
+      "end": 18.316527
+    },
+    {
+      "BN": "সুরের বাঁধনে",
+      "EN": "surero bandhane",
+      "correctOrder": ["in", "the", "knots", "of", "music"],
+      "alternative": [],
+      "trivia": "",
+      "start": 18.316527,
+      "end": 22.79236
+    },
+    {
+      "BN": "তুমি জান না, আমি তোমারে পেয়েছি",
+      "EN": "tumi jano na ami tomare peyechi",
+      "correctOrder": ["you", "don't", "know", "I", "have", "found", "you"],
+      "alternative": [
+        ["I", "have", "found", "you", "don't", "you", "know"],
+        ["don't", "you", "know", "I", "have", "found", "you"]
+      ],
+      "trivia": "",
+      "start": 22.79236,
+      "end": 31.710228
+    },
+    {
+      "BN": "অজানা সাধনে",
+      "EN": "ajana sadhane",
+      "correctOrder": ["with", "a", "lot", "of", "toil"],
+      "alternative": [],
+      "trivia": "",
+      "start": 31.710228,
+      "end": 35.726186
+    },
+    {
+      "BN": "সে সাধনায় মিশিয়া যায় বকুলগন্ধ",
+      "EN": "se sadhanay mishiya jay bakulogandho",
+      "correctOrder": [
+        "in",
+        "that",
+        "devotion",
+        "the",
+        "smell",
+        "of",
+        "bakul",
+        "gets",
+        "mixed"
+      ],
+      "alternative": [
+        [
+          "the",
+          "smell",
+          "of",
+          "bakul",
+          "gets",
+          "mixed",
+          "in",
+          "that",
+          "devotion"
+        ],
+        [
+          "in",
+          "that",
+          "devotion",
+          "gets",
+          "mixed",
+          "the",
+          "smell",
+          "of",
+          "bakul"
+        ]
+      ],
+      "trivia": "Bakul is a aromatic fruit with mythological and religious significance with mention in Ayurveda as a therapeutic plant. Its flowers are said to be the signs of welcoming of spring.  Refer: https://housing.com/news/bakul-tree-facts-about-spanish-cherry/",
+      "start": 60.658936,
+      "end": 71.222593
+    },
+    {
+      "BN": "সে সাধনায় মিলিয়া যায় কবির ছন্দ",
+      "EN": "se sadhanaya miliya jay kabiro chando",
+      "correctOrder": [
+        "in",
+        "that",
+        "devotion",
+        "the",
+        "poet's",
+        "poems",
+        "get",
+        "mixed"
+      ],
+      "alternative": [
+        ["the", "poet's", "poems", "get", "mixed", "in", "that", "devotion"],
+        ["in", "that", "devotion", "get", "mixed", "the", "poet's", "poems"]
+      ],
+
+      "trivia": "",
+      "start": 71.222593,
+      "end": 80.61996599999999
+    },
+    {
+      "BN": "তুমি জানো না, ঢেকে রেখেছি তোমার নাম",
+      "EN": "tumi jano na, dheke rekhechi tomaro naam",
+      "correctOrder": [
+        "don't",
+        "you",
+        "know",
+        "I",
+        "have",
+        "covered",
+        "your",
+        "name"
+      ],
+      "alternative": [
+        "you",
+        "don't",
+        "know",
+        "I",
+        "have",
+        "covered",
+        "your",
+        "name"
+      ],
+      "trivia": "",
+      "start": 80.61996599999999,
+      "end": 91.668419
+    },
+    {
+      "BN": "রঙিন ছায়ার আচ্ছাদনে",
+      "EN": "rangino chayar achchadane",
+      "correctOrder": ["in", "veil", "of", "colorful", "shades"],
+      "alternative": [],
+      "trivia": "",
+      "start": 91.668419,
+      "end": 98.452814
+    },
+    {
+      "BN": "আমি তোমার সঙ্গে বেঁধেছি আমার প্রাণ",
+      "EN": "ami tomaro sange bendhechi amaro praan",
+      "correctOrder": ["I", "have", "tied", "my", "life", "with", "you"],
+      "alternative": ["I", "have", "tied", "with", "you", "my", "life"],
+      "trivia": "",
+      "start": 98.452814,
+      "end": 108.412013
+    },
+    {
+      "BN": "সুরের বাঁধনে",
+      "EN": "surero bandhane",
+      "correctOrder": ["in", "the", "knots", "of", "music"],
+      "alternative": [],
+      "trivia": "",
+      "start": 108.412013,
+      "end": 113.789748
+    }
+  ]
+}

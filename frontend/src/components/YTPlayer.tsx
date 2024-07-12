@@ -3,7 +3,7 @@ import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 import { convertTimeToSeconds } from "../helpers";
 
-const isLocalhost = window.location.hostname === "localhost";
+const isLocalhost = window.location.hostname === "localhosxt";
 
 const MinimalYouTubeSectionPlayer = forwardRef<
   {

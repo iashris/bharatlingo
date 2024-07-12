@@ -14,7 +14,7 @@ type ArrangeWords = {
   HI: string;
   BN: string;
   correctOrder: string[];
-  alternative?: string[];
+  alternative?: string[] | string[][];
 };
 
 // type MCQ = {

@@ -16,6 +16,7 @@
     "@types/dom-speech-recognition": "^0.0.4",
     "@types/react-youtube": "^7.10.0",
     "antd": "^5.19.0",
+    "lottie-react": "^2.4.0",
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

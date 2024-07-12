@@ -45,7 +45,10 @@
       "EN": "tomay herigo swopone shoyone",
       "HI": "तोमाय हेरिगो स्वपने शयने",
       "BN": "তোমায় হেরিগো স্বপনে শয়নে",
-      "correctOrder": ["seeing", "you", "in", "dreams", "while", "sleeping"],
+      "correctOrder": [
+        ["seeing", "you", "in", "dreams", "while", "sleeping"],
+        ["seeing", "you", "while", "sleeping", "in", "dreams"]
+      ],
       "audio": "/audio/5.mp3",
       "start": "1:08",
       "end": "1:13.5"
@@ -57,7 +60,8 @@
       "correctOrder": ["face", "colored", "like", "paan"],
       "alternative": ["colored", "like", "paan", "face"],
       "start": "1:13.5",
-      "end": "1:23"
+      "end": "1:23",
+      "trivia": "Tambul is a betel leaf, and paan is a preparation made from betel leaf and areca nut. The line is a metaphor for the redness of the face resembling the redness of crushed betel leaf."
     },
     {
       "EN": "mori oporup rup madhuri",
