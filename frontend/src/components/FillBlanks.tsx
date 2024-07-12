@@ -61,14 +61,14 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
         JSON.stringify(submittedOrder) === JSON.stringify(alternative));
 
     if (isOrderCorrect) {
-      message.success("Correct ✅");
+      message.success("Correct!");
       if (trivia) {
         setShowTrivia(true);
       } else {
         onComplete?.();
       }
     } else {
-      message.error("Let's try again! ❌");
+      message.error("Let's try again!");
     }
   };
 

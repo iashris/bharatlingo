@@ -15,6 +15,11 @@ const content = [
     title: "Amaro Porano Jaha Chay",
     id: "_69QcJf0LLU",
   },
+  {
+    key: "maati",
+    title: "Banglar Mati Banglar Jol",
+    id: "OKGTug10PyE",
+  },
 ];
 
 export const Home = () => {
@@ -22,10 +27,10 @@ export const Home = () => {
   return (
     <div className="bg-gray-100 p-4 md:p-8 min-h-screen">
       <div className="max-w-6xl mx-auto">
-        <Title level={2} className="mb-6 text-center">
-          Video Gallery
+        <Title level={2} className="mb-12 text-center">
+          BharatLingo | Bengali
         </Title>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
           {content.map((item) => (
             <Card
               key={item.key}

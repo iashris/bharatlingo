@@ -171,7 +171,7 @@ const YouTubeAnnotation: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "youtube_annotation.json";
+    a.download = annotations[0].EN.toLowerCase().replace(" ", "_") + ".json";
     a.click();
     URL.revokeObjectURL(url);
   };
