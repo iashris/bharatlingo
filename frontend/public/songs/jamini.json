@@ -1,0 +1,156 @@
+{
+  "name": "আমি যামিনী | Aami Jamini",
+  "videoId": "NUu7xUxYnn0",
+  "song": [
+    {
+      "EN": "aami jamini tumi shoshi he",
+      "HI": "आमी जमिनी तुमी शोशी हे",
+      "BN": "আমি যামিনী তুমি শশী হে",
+      "correctOrder": ["I", "am", "the", "night", "you", "are", "the", "moon"],
+      "audio": "/audio/1.mp3",
+      "start": 1,
+      "end": 10,
+      "trivia": "Jamini means night in Bengali, and Shoshi means moon. The song is a metaphor for the relationship between the night and the moon."
+    },
+    {
+      "EN": "bhatichho gogon majhe",
+      "HI": "भातिछ गगन माझे",
+      "BN": "ভাতিছ গগন মাঝে",
+      "correctOrder": ["shining", "in", "the", "sky", "above"],
+      "alternative": ["shining", "above", "in", "the", "sky"],
+      "audio": "/audio/2.mp3",
+      "start": 11,
+      "end": 17
+    },
+    {
+      "EN": "momo shorosheete tobo ujjol probha",
+      "HI": "मम सरसीते तब उज्जल प्रभा",
+      "BN": "মম সরসীতে তব উজল প্রভা",
+      "correctOrder": ["in", "my", "lake", "your", "bright", "light"],
+      "alternative": ["your", "bright", "light", "in", "my", "lake"],
+      "audio": "/audio/3.mp3",
+      "start": 36,
+      "end": 42
+    },
+    {
+      "EN": "bimbito jeno laje",
+      "HI": "बिम्बित येन लाजे",
+      "BN": "বিম্বিত যেন লাজে",
+      "correctOrder": ["reflects", "as", "if", "shy"],
+      "audio": "/audio/4.mp3",
+      "start": 42,
+      "end": 46.5
+    },
+    {
+      "EN": "tomay herigo swopone shoyone",
+      "HI": "तोमाय हेरिगो स्वपने शयने",
+      "BN": "তোমায় হেরিগো স্বপনে শয়নে",
+      "correctOrder": ["seeing", "you", "in", "dreams", "while", "sleeping"],
+      "audio": "/audio/5.mp3",
+      "start": "1:08",
+      "end": "1:13.5"
+    },
+    {
+      "EN": "tambur ranga boyane",
+      "HI": "ताम्बुर रंगा बयाने",
+      "BN": "তাম্বুর রাঙ্গা বয়ানে",
+      "correctOrder": ["face", "colored", "like", "paan"],
+      "alternative": ["colored", "like", "paan", "face"],
+      "start": "1:13.5",
+      "end": "1:23"
+    },
+    {
+      "EN": "mori oporup rup madhuri",
+      "HI": "मरि अपरूप रूप माधुरी",
+      "BN": "মরি অপরূপ রূপ মাধুরী",
+      "correctOrder": ["oh", "what", "exquisite", "beauty"],
+      "start": "1:24",
+      "end": "1:34.5"
+    },
+    {
+      "EN": "boshonto shom biraje",
+      "HI": "बसंत-सम बिराजे",
+      "BN": "বসন্ত-সম বিরাজে",
+      "correctOrder": ["like", "spring", "reigning"],
+      "alternative": ["reigning", "like", "spring"],
+      "start": "1:34.5",
+      "end": "1:38.7"
+    },
+    {
+      "EN": "tumi je shishir bindu",
+      "HI": "तुमि ये शिशिर बिंदु मम कुमुदिर",
+      "BN": "তুমি যে শিশির বিন্দু মম কুমুদির",
+      "options": ["you", "are", "dewdrop"],
+      "correctOrder": ["you", "are", "dewdrop"],
+      "start": "1:55",
+      "end": "2:00"
+    },
+    {
+      "EN": "momo kumudir bokkhe",
+      "HI": "मम कुमुदिर बोक्खे",
+      "BN": "মম কুমুদির বক্ষে",
+      "correctOrder": ["in", "my", "waterlily's", "heart"],
+      "start": "2:00",
+      "end": "2:05"
+    },
+    {
+      "EN": "na herile ogo tomare",
+      "HI": "बक्षे ना हेरिले ओगो तोमारे",
+      "BN": "বক্ষে না হেরিলে ওগো তোমারে",
+      "correctOrder": ["if", "not", "seeing", "you"],
+      "start": "2:05",
+      "end": "2:10"
+    },
+    {
+      "EN": "tomosha ghonay chokkhe",
+      "HI": "तमसा घनाय चक्षे",
+      "BN": "তমসা ঘনায় চক্ষে",
+      "correctOrder": ["darkness", "thickens", "in", "eyes"],
+      "start": "2:10.5",
+      "end": "2:15.5"
+    },
+    {
+      "EN": "tumi ogonito tara gogone",
+      "HI": "तुमि अगणित तारा गगने",
+      "BN": "তুমি অগণিত তাঁরা গগনে",
+      "correctOrder": [
+        "you",
+        "are",
+        "the",
+        "countless",
+        "stars",
+        "in",
+        "the",
+        "sky"
+      ],
+      "start": "2:36",
+      "end": "2:41.5"
+    },
+    {
+      "EN": "pranbayou momo jibone",
+      "HI": "प्राणबायु मम जीवने",
+      "BN": "প্রাণবায়ু মম জীবনে",
+      "correctOrder": ["life-breath", "in", "my", "life"],
+      "start": "2:42",
+      "end": "2:51.5"
+    },
+    {
+      "EN": "tobo name momo prem muroli",
+      "HI": "तब नामे मम प्रेम मुरली",
+      "BN": "তব নামে মম প্রেম মুরলী",
+      "correctOrder": ["in", "your", "name", "my", "love", "flute"],
+      "alternative": ["my", "love", "flute", "in", "your", "name"],
+      "start": "2:51.6",
+      "end": "3:02"
+    },
+    {
+      "EN": "poraner gothe baje",
+      "HI": "पराणेर गोठे बाजे",
+      "BN": "পরাণের গোঠে বাজে",
+      "correctOrder": ["in", "heart's", "abode", "echoes"],
+      "alternative": ["echoes", "in", "heart's", "abode"],
+      "start": "3:02",
+      "end": "3:06.3"
+    }
+  ]
+}
