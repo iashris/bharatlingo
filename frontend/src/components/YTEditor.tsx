@@ -1,16 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
-import { Input, Button, Space, Typography, message } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
+import { Input, Button, Space, Typography, message, Form } from "antd";
+import {
+  DownloadOutlined,
+  EditOutlined,
+  PlusOutlined,
+} from "@ant-design/icons";
 import Sanscript from "@indic-transliteration/sanscript";
 
 const { Title, Text } = Typography;
+const { TextArea } = Input;
 
 interface Annotation {
   BN: string;
   EN: string;
   correctOrder: string[];
-  alternative: string[];
+  alternative: string[][];
   trivia: string;
   start: number;
   end: number;
@@ -19,6 +24,7 @@ interface Annotation {
 interface JsonData {
   name: string;
   videoId: string;
+  introduction: string;
   song: Annotation[];
 }
 
@@ -31,13 +37,14 @@ declare global {
 
 const YouTubeAnnotation: React.FC = () => {
   const [videoId, setVideoId] = useState<string>("");
+  const [introduction, setIntroduction] = useState<string>("");
   const playerRef = useRef<YouTubePlayer | null>(null);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
   const [currentAnnotation, setCurrentAnnotation] = useState<Annotation>({
     BN: "",
     EN: "",
     correctOrder: [],
-    alternative: [],
+    alternative: [[]],
     trivia: "",
     start: 0,
     end: 0,
@@ -46,6 +53,7 @@ const YouTubeAnnotation: React.FC = () => {
   const [recognition, setRecognition] = useState<SpeechRecognition | null>(
     null
   );
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const SpeechRecognition =
@@ -111,20 +119,41 @@ const YouTubeAnnotation: React.FC = () => {
     setCurrentAnnotation((prev) => ({ ...prev, end: currentTime }));
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    if (name === "correctOrder" || name === "alternative") {
+    if (name === "correctOrder") {
       setCurrentAnnotation((prev) => ({ ...prev, [name]: value.split(" ") }));
+    } else if (name === "alternative") {
+      // Do nothing here, we'll handle alternative separately
     } else {
       setCurrentAnnotation((prev) => ({ ...prev, [name]: value }));
     }
   };
 
+  const handleAlternativeChange = (index: number, value: string) => {
+    setCurrentAnnotation((prev) => {
+      const newAlternative = [...prev.alternative];
+      newAlternative[index] = value.split(" ");
+      return { ...prev, alternative: newAlternative };
+    });
+  };
+
+  const addAlternative = () => {
+    setCurrentAnnotation((prev) => ({
+      ...prev,
+      alternative: [...prev.alternative, []],
+    }));
+  };
+
   const validateAlternative = (
     correctOrder: string[],
-    alternative: string[]
+    alternative: string[][]
   ) => {
-    return alternative.every((word) => correctOrder.includes(word));
+    return alternative.every((alt) =>
+      alt.every((word) => correctOrder.includes(word))
+    );
   };
 
   const handleAddAnnotation = () => {
@@ -144,12 +173,21 @@ const YouTubeAnnotation: React.FC = () => {
         );
         return;
       }
-      setAnnotations((prev) => [...prev, { ...currentAnnotation }]);
+      if (editingIndex !== null) {
+        setAnnotations((prev) => {
+          const newAnnotations = [...prev];
+          newAnnotations[editingIndex] = currentAnnotation;
+          return newAnnotations;
+        });
+        setEditingIndex(null);
+      } else {
+        setAnnotations((prev) => [...prev, currentAnnotation]);
+      }
       setCurrentAnnotation({
         BN: "",
         EN: "",
         correctOrder: [],
-        alternative: [],
+        alternative: [[]],
         trivia: "",
         start: currentAnnotation.end,
         end: currentAnnotation.end,
@@ -163,6 +201,7 @@ const YouTubeAnnotation: React.FC = () => {
     const jsonData: JsonData = {
       name: annotations[0]?.EN || "Untitled",
       videoId: videoId,
+      introduction: introduction,
       song: annotations,
     };
     const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
@@ -171,7 +210,9 @@ const YouTubeAnnotation: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = annotations[0].EN.toLowerCase().replace(" ", "_") + ".json";
+    a.download =
+      annotations[0]?.EN?.toLowerCase().replace(" ", "_") + ".json" ||
+      "untitled.json";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -179,6 +220,11 @@ const YouTubeAnnotation: React.FC = () => {
   const handleSetTime = (timeType: "start" | "end") => {
     const currentTime = playerRef.current?.getCurrentTime() || 0;
     setCurrentAnnotation((prev) => ({ ...prev, [timeType]: currentTime }));
+  };
+
+  const handleEdit = (index: number) => {
+    setCurrentAnnotation(annotations[index]);
+    setEditingIndex(index);
   };
 
   return (
@@ -196,74 +242,87 @@ const YouTubeAnnotation: React.FC = () => {
             onReady={onReady}
           />
         )}
+        <TextArea
+          placeholder="Enter introduction"
+          value={introduction}
+          onChange={(e) => setIntroduction(e.target.value)}
+          className="mt-4"
+          rows={4}
+        />
       </div>
       <div className="w-full md:w-1/2 pl-4">
         <Title level={3}>Annotation Input</Title>
-        <Space direction="vertical" className="w-full">
-          <div>
-            <Text>Bengali:</Text>
+        <Form layout="vertical">
+          <Form.Item label="Bengali:">
             <Space>
               <Input
                 value={currentAnnotation.BN}
                 onChange={handleInputChange}
                 name="BN"
+                style={{ width: "300px" }}
               />
               <Button onClick={isRecording ? stopRecording : startRecording}>
                 {isRecording ? "Stop Recording" : "Start Recording"}
               </Button>
             </Space>
-          </div>
-          <div>
-            <Text>Transliteration:</Text>
-            <Button
-              onClick={() => {
-                const transliteratedText = Sanscript.t(
-                  currentAnnotation.BN,
-                  "bengali",
-                  "itrans"
-                )
-                  .toLowerCase()
-                  .replace(".", "");
-                setCurrentAnnotation((prev) => ({
-                  ...prev,
-                  EN: transliteratedText,
-                }));
-              }}
-            >
-              Transliterate
-            </Button>
-            <Input
-              value={currentAnnotation.EN}
-              onChange={handleInputChange}
-              name="EN"
-            />
-          </div>
-          <div>
-            <Text>Correct Order (space-separated):</Text>
+          </Form.Item>
+          <Form.Item label="Transliteration:">
+            <Space>
+              <Input
+                value={currentAnnotation.EN}
+                onChange={handleInputChange}
+                name="EN"
+                style={{ width: "300px" }}
+              />
+              <Button
+                onClick={() => {
+                  const transliteratedText = Sanscript.t(
+                    currentAnnotation.BN,
+                    "bengali",
+                    "itrans"
+                  )
+                    .toLowerCase()
+                    .replace(".", "");
+                  setCurrentAnnotation((prev) => ({
+                    ...prev,
+                    EN: transliteratedText,
+                  }));
+                }}
+              >
+                Transliterate
+              </Button>
+            </Space>
+          </Form.Item>
+          <Form.Item label="Correct Order (space-separated):">
             <Input
               value={currentAnnotation.correctOrder.join(" ")}
               onChange={handleInputChange}
               name="correctOrder"
             />
-          </div>
-          <div>
-            <Text>Alternative Order (space-separated):</Text>
-            <Input
-              value={currentAnnotation.alternative.join(" ")}
-              onChange={handleInputChange}
-              name="alternative"
-            />
-          </div>
-          <div>
-            <Text>Trivia:</Text>
-            <Input
+          </Form.Item>
+          {currentAnnotation.alternative.map((alt, index) => (
+            <Form.Item
+              key={index}
+              label={`Alternative Order ${index + 1} (space-separated):`}
+            >
+              <Input
+                value={alt.join(" ")}
+                onChange={(e) => handleAlternativeChange(index, e.target.value)}
+              />
+            </Form.Item>
+          ))}
+          <Button onClick={addAlternative} icon={<PlusOutlined />}>
+            Add Another Alternative
+          </Button>
+          <Form.Item label="Trivia:">
+            <TextArea
               value={currentAnnotation.trivia}
               onChange={handleInputChange}
               name="trivia"
+              rows={4}
             />
-          </div>
-          <div>
-            <Text>Start Time:</Text>
+          </Form.Item>
+          <Form.Item label="Start Time:">
             <Space>
               <Input
                 value={currentAnnotation.start.toFixed(2)}
@@ -278,9 +337,8 @@ const YouTubeAnnotation: React.FC = () => {
                 Set Current Time
               </Button>
             </Space>
-          </div>
-          <div>
-            <Text>End Time:</Text>
+          </Form.Item>
+          <Form.Item label="End Time:">
             <Space>
               <Input
                 value={currentAnnotation.end.toFixed(2)}
@@ -295,20 +353,24 @@ const YouTubeAnnotation: React.FC = () => {
                 Set Current Time
               </Button>
             </Space>
-          </div>
-          <Button onClick={handleAddAnnotation}>Add Annotation</Button>
-        </Space>
+          </Form.Item>
+          <Button onClick={handleAddAnnotation}>
+            {editingIndex !== null ? "Update Annotation" : "Add Annotation"}
+          </Button>
+        </Form>
         <Title level={4} className="mt-4">
           Annotations
         </Title>
         {annotations.map((annotation, index) => (
-          <div key={index} className="mb-2">
+          <div key={index} className="mb-2 flex justify-between items-start">
             <Text>
               {annotation.BN} - {annotation.EN} - Correct:{" "}
               {annotation.correctOrder.join(", ")} - Alt:{" "}
-              {annotation.alternative.join(", ")} - Trivia: {annotation.trivia}(
-              {annotation.start.toFixed(2)} - {annotation.end.toFixed(2)})
+              {annotation.alternative.map((alt) => alt.join(", ")).join(" | ")}{" "}
+              - Trivia: {annotation.trivia}({annotation.start.toFixed(2)} -{" "}
+              {annotation.end.toFixed(2)})
             </Text>
+            <Button onClick={() => handleEdit(index)} icon={<EditOutlined />} />
           </div>
         ))}
         <Button

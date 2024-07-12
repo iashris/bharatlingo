@@ -1,0 +1,360 @@
+{
+  "name": "Boshonto Eshe Gache",
+  "videoId": "HohBnpGUllc",
+  "introduction": "Boshonto eshe gache is a song from the 2014 film Chotushkone, it is about the arrival of Spring, a theme that many Bengali songs are dedicated to.",
+  "song": [
+    {
+      "BN": "বাতাসে বহিছে প্রেম, নয়নে লাগিল নেশা",
+      "EN": "batashe bohiche prem, nayane lagilo nesha",
+      "correctOrder": [
+        "love",
+        "is",
+        "in",
+        "the",
+        "air,",
+        "eyes",
+        "are",
+        "intoxicated"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 31.95589826839827,
+      "end": 41.798334
+    },
+    {
+      "BN": "কারা যে ডাকিল পিছে বসন্ত এসে গেছে",
+      "EN": "kara je dakilo piche boshonto ese geche",
+      "correctOrder": [
+        "someone",
+        "has",
+        "called",
+        "from",
+        "behind",
+        "saying",
+        "spring",
+        "has",
+        "arrived"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 41.798334,
+      "end": 47.082045
+    },
+    {
+      "BN": "মধুর অমৃতবাণী, বেলা গেল সহজেই",
+      "EN": "madhuro amritobani, bela gelo sahajei",
+      "correctOrder": [
+        "time",
+        "passed",
+        "away",
+        "easily",
+        "listening",
+        "to",
+        "sweet",
+        "songs"
+      ],
+      "alternative": [
+        [
+          "listening",
+          "to",
+          "sweet",
+          "songs",
+          "time",
+          "passed",
+          "away",
+          "easily"
+        ]
+      ],
+      "trivia": "",
+      "start": 47.082045,
+      "end": 51.840052
+    },
+    {
+      "BN": "মরমে উঠিল বাজি বসন্ত এসে গেছে",
+      "EN": "morome uthilo baji boshonto eshe geche",
+      "correctOrder": [
+        "my",
+        "heart",
+        "has",
+        "placed",
+        "a",
+        "bet",
+        "that",
+        "spring",
+        "has",
+        "arrived"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 51.840052,
+      "end": 56.922524
+    },
+    {
+      "BN": "থাক তব ভুবনের ধুলি মাখা চরণে মাথা নত করে রব",
+      "EN": "thak tobo bhubaner dhuli makha charane matha noto kore robo",
+      "correctOrder": [
+        "let",
+        "my",
+        "head",
+        "remain",
+        "bowed",
+        "at",
+        "your",
+        "dust-covered",
+        "feet"
+      ],
+      "alternative": [
+        [
+          "at",
+          "your",
+          "dust-covered",
+          "feet",
+          "let",
+          "my",
+          "head",
+          "remain",
+          "bowed"
+        ]
+      ],
+      "trivia": "",
+      "start": 57.730142,
+      "end": 65.587006
+    },
+    {
+      "BN": "বসন্ত এসে গেছে বসন্ত এসে গেছে",
+      "EN": "boshonto eshe geche boshonto eshe geche",
+      "correctOrder": ["spring", "has", "arrived", "spring", "has", "arrived"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 65.587006,
+      "end": 76.620617
+    },
+    {
+      "BN": "গগনের নব নীল মনের গোপনে বাজে ঐ বাজে ঐ বাজে ঐ",
+      "EN": "gaganer nobo nil monero gopane baje oi baje oi baje oi",
+      "correctOrder": [
+        "deep",
+        "within",
+        "the",
+        "sky's",
+        "new",
+        "blue",
+        "mind,",
+        "it",
+        "plays",
+        "it",
+        "plays",
+        "it",
+        "plays"
+      ],
+      "alternative": [
+        [
+          "within",
+          "the",
+          "sky's",
+          "deep",
+          "new",
+          "blue",
+          "mind,",
+          "it",
+          "plays",
+          "it",
+          "plays",
+          "it",
+          "plays"
+        ],
+        [
+          "deep",
+          "within",
+          "the",
+          "sky's",
+          "blue",
+          "new",
+          "mind,",
+          "it",
+          "plays",
+          "it",
+          "plays",
+          "it",
+          "plays"
+        ],
+        [
+          "within",
+          "the",
+          "sky's",
+          "new",
+          "blue",
+          "deep",
+          "mind,",
+          "it",
+          "plays",
+          "it",
+          "plays",
+          "it",
+          "plays"
+        ],
+        [
+          "within",
+          "the",
+          "sky's",
+          "blue",
+          "new",
+          "deep",
+          "mind,",
+          "it",
+          "plays",
+          "it",
+          "plays",
+          "it",
+          "plays"
+        ]
+      ],
+      "trivia": "",
+      "start": 90.342395,
+      "end": 98.452879
+    },
+    {
+      "BN": "পলাশের নেশা মাখি চলেছি দুজনে",
+      "EN": "polashero nesha makhi chalechi dujane",
+      "correctOrder": [
+        "intoxicated",
+        "by",
+        "the",
+        "palash",
+        "we",
+        "two",
+        "walk"
+      ],
+      "alternative": [
+        ["we", "two", "walk", "intoxicated", "by", "the", "palash"]
+      ],
+      "trivia": "Palash is a beautiful orange flower that blooms in spring. During Holi, this flower is boiled in water to create a beautifully vibrant organic colored water. https://en.wikipedia.org/wiki/Butea_monosperma",
+      "start": 98.452879,
+      "end": 102.38905
+    },
+    {
+      "BN": "বাসনার রঙে মিশি শ্যামলে স্বপনে",
+      "EN": "bashonar range mishi shyamale shopone",
+      "correctOrder": [
+        "colors",
+        "of",
+        "desire",
+        "mixing",
+        "with",
+        "green",
+        "dreams"
+      ],
+      "alternative": [
+        ["mixing", "colors", "of", "desire", "with", "green", "dreams"],
+        ["green", "dreams", "mixing", "with", "colors", "of", "desire"]
+      ],
+      "trivia": "",
+      "start": 102.38905,
+      "end": 106.45177
+    },
+    {
+      "BN": "কুহু কুহু শোনা যায় কোকিলের কুহু তান বসন্ত এসে গেছে",
+      "EN": "kuhu kuhu shona jay kokilero kuhu tana, boshonto eshe gache",
+      "correctOrder": [
+        "Cuckoo's",
+        "Koo",
+        "Koo",
+        "can",
+        "be",
+        "heard,",
+        "spring",
+        "has",
+        "arrived"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 106.45177,
+      "end": 120.720387
+    },
+    {
+      "BN": "এই বসন্তে অনেক জন্ম আগে",
+      "EN": "ei boshonte onek janmo age",
+      "correctOrder": ["in", "this", "spring", "many", "births", "ago"],
+      "alternative": [["many", "births", "ago", "in", "this", "spring"]],
+      "trivia": "",
+      "start": 157.37918,
+      "end": 165.372065
+    },
+    {
+      "BN": "তোমায় প্রথম দেখেছিলেম আমি",
+      "EN": "tomaya prothom dekhechilem ami",
+      "correctOrder": ["I", "had", "seen", "you", "first"],
+      "alternative": [["I", "had", "first", "seen", "you"]],
+      "trivia": "Dekhechilem is a poetic way of saying Dekhechilam, which is more standard.",
+      "start": 165.372065,
+      "end": 172.010161
+    },
+    {
+      "BN": "হেঁটেছিলেম নিরুদ্দেশের পানে",
+      "EN": "hentechilem niruddesher pane",
+      "correctOrder": ["I", "had", "walked", "towards", "the", "unknown"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 172.010161,
+      "end": 179.583928
+    },
+    {
+      "BN": "সেই বসন্ত এখন ভীষণ দামি",
+      "EN": "sei boshonto ekhon bhishon dami",
+      "correctOrder": ["that", "spring", "is", "now", "extremely", "precious"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 179.583928,
+      "end": 186.953067
+    },
+    {
+      "BN": "আমার কাছে তোমার কাছে বসন্ত এসে গেছে",
+      "EN": "amara kache tomar kache boshonto ese geche",
+      "correctOrder": ["for", "me,", "for", "you,", "spring", "has", "arrived"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 186.953067,
+      "end": 199.174556
+    },
+    {
+      "BN": "থাক তব ভুবনের ধুলি মাখা চরনে মাথা নত করে রব",
+      "EN": "thak tobo bhubaner dhuli makha charane matha noto kore robo",
+      "correctOrder": [
+        "let",
+        "my",
+        "head",
+        "remain",
+        "bowed",
+        "at",
+        "your",
+        "dust-covered",
+        "feet"
+      ],
+      "alternative": [
+        [
+          "at",
+          "your",
+          "dust-covered",
+          "feet",
+          "let",
+          "my",
+          "head",
+          "remain",
+          "bowed"
+        ]
+      ],
+      "trivia": "",
+      "start": 199.174556,
+      "end": 207.15516
+    },
+    {
+      "BN": "বসন্ত এসে গেছে",
+      "EN": "boshonto eshe geche",
+      "correctOrder": ["spring", "has", "arrived"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 207.15516,
+      "end": 232.58067
+    }
+  ]
+}
