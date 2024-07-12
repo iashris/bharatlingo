@@ -2,6 +2,7 @@ export interface MinimalYouTubeSectionPlayerProps {
   videoId: string;
   start: number | string;
   end: number | string;
+  showIntroduction?: boolean;
 }
 
 type BaseActivityComponent = {
@@ -24,7 +25,7 @@ type ArrangeWords = {
 
 type SongLine = BaseActivityComponent &
   ArrangeWords &
-  Omit<MinimalYouTubeSectionPlayerProps, "videoId">;
+  Pick<MinimalYouTubeSectionPlayerProps, "start" | "end">;
 
 export type YouTubeFillBlanksActivity = {
   song: SongLine[];

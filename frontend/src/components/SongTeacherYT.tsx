@@ -4,13 +4,7 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import LanguageLearningComponent from "./FillBlanks";
 import YouTubeSectionPlayer from "./YTPlayer";
 import { YouTubeFillBlanksActivity } from "../types/common";
-
-const convertTimeToSeconds = (time: string | number): number => {
-  if (typeof time === "number") return time;
-
-  const [minutes, seconds] = time.split(":").map(Number);
-  return minutes * 60 + seconds;
-};
+import { convertTimeToSeconds } from "../helpers";
 
 const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   song: songObject,
@@ -32,27 +26,31 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
 
     if (index < song.length - 1) {
       setCurrentLineIndex(index + 1);
-      playerRef.current?.playSection();
+      // Play the video section for the next line after a short delay
+      setTimeout(() => {
+        playerRef.current?.playSection();
+      }, 1000); // 1 second delay
     }
   };
 
   const handlePrevious = () => {
     if (currentLineIndex > 0) {
       setCurrentLineIndex(currentLineIndex - 1);
-      playerRef.current?.playSection();
     }
   };
 
   const handleNext = () => {
     if (showIntroduction) {
       setShowIntroduction(false);
-      playerRef.current?.playSection();
+      // Play the video section for the next line after a short delay
+      setTimeout(() => {
+        playerRef.current?.playSection();
+      }, 1000); // 1 second delay
     } else if (
       currentLineIndex < song.length - 1 &&
       completedLines[currentLineIndex]
     ) {
       setCurrentLineIndex(currentLineIndex + 1);
-      playerRef.current?.playSection();
     }
   };
 
@@ -69,13 +67,14 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
         end={convertTimeToSeconds(song[currentLineIndex].end)}
         videoId={videoId}
         ref={playerRef}
+        showIntroduction={showIntroduction}
       />
       {showIntroduction ? (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-4">Introduction</h2>
           <p className="mb-4">{introduction}</p>
           <Button onClick={handleNext} className="w-full">
-            Proceed to Challenges
+            Begin
           </Button>
         </div>
       ) : (

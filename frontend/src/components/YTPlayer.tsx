@@ -1,6 +1,7 @@
-import { useRef, forwardRef, useImperativeHandle } from "react";
+import { useRef, forwardRef, useImperativeHandle, useCallback } from "react";
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
+import { convertTimeToSeconds } from "../helpers";
 
 const isLocalhost = window.location.hostname === "localhost";
 
@@ -9,9 +10,8 @@ const MinimalYouTubeSectionPlayer = forwardRef<
     playSection: () => void;
   },
   MinimalYouTubeSectionPlayerProps
->(({ videoId, start, end }, ref) => {
+>(({ videoId, start, end, showIntroduction }, ref) => {
   const playerRef = useRef<YouTubePlayer | null>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useImperativeHandle(ref, () => ({
     playSection,
@@ -21,20 +21,37 @@ const MinimalYouTubeSectionPlayer = forwardRef<
     playerRef.current = event.target;
   };
 
-  const playSection = () => {
-    if (playerRef.current) {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      playerRef.current.seekTo(start, true);
-      playerRef.current.playVideo();
-      if (typeof end === "string" || typeof start === "string") return;
-      const duration = (end - start) * 1000; // Convert to milliseconds
-      timeoutRef.current = setTimeout(() => {
-        playerRef.current?.pauseVideo();
-      }, duration);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const clearPlayerInterval = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
-  };
+  }, []);
+
+  const playSection = useCallback(() => {
+    if (playerRef.current) {
+      clearPlayerInterval();
+
+      const startTime =
+        typeof start === "string" ? convertTimeToSeconds(start) : start;
+      const endTime = typeof end === "string" ? convertTimeToSeconds(end) : end;
+
+      playerRef.current.seekTo(startTime, true);
+      playerRef.current.playVideo();
+
+      intervalRef.current = setInterval(() => {
+        if (playerRef.current) {
+          const currentTime = playerRef.current.getCurrentTime();
+          if (currentTime >= endTime) {
+            playerRef.current.pauseVideo();
+            clearPlayerInterval();
+          }
+        }
+      }, 100); // Check every 100ms
+    }
+  }, [start, end, clearPlayerInterval]);
 
   const playerWidth = Math.min(560, window.innerWidth);
   const playerHeight = (playerWidth * 9) / 16;
@@ -64,12 +81,14 @@ const MinimalYouTubeSectionPlayer = forwardRef<
           className={isLocalhost ? null : "pointer-events-none"}
         />
       </div>
-      <button
-        onClick={playSection}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
-      >
-        Play section
-      </button>
+      {!showIntroduction && (
+        <button
+          onClick={playSection}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
+        >
+          Play section
+        </button>
+      )}
     </div>
   );
 });
