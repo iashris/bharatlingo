@@ -1,9 +1,16 @@
-import { useRef, forwardRef, useImperativeHandle, useCallback } from "react";
+import {
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+  useCallback,
+  useEffect,
+} from "react";
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 import { convertTimeToSeconds } from "../helpers";
 
 const isLocalhost = window.location.hostname === "localhosxt";
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 const MinimalYouTubeSectionPlayer = forwardRef<
   {
@@ -22,36 +29,56 @@ const MinimalYouTubeSectionPlayer = forwardRef<
   };
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const clearPlayerInterval = useCallback(() => {
+  const clearTimers = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
+    }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
   }, []);
 
   const playSection = useCallback(() => {
     if (playerRef.current) {
-      clearPlayerInterval();
+      clearTimers();
 
       const startTime =
         typeof start === "string" ? convertTimeToSeconds(start) : start;
       const endTime = typeof end === "string" ? convertTimeToSeconds(end) : end;
+      const duration = endTime - startTime;
 
       playerRef.current.seekTo(startTime, true);
       playerRef.current.playVideo();
 
-      intervalRef.current = setInterval(() => {
-        if (playerRef.current) {
-          const currentTime = playerRef.current.getCurrentTime();
-          if (currentTime >= endTime) {
+      if (isMobile) {
+        timeoutRef.current = setTimeout(() => {
+          if (playerRef.current) {
             playerRef.current.pauseVideo();
-            clearPlayerInterval();
           }
-        }
-      }, 100); // Check every 100ms
+        }, duration * 1000);
+      } else {
+        intervalRef.current = setInterval(() => {
+          if (playerRef.current) {
+            const currentTime = playerRef.current.getCurrentTime();
+            if (currentTime >= endTime) {
+              playerRef.current.pauseVideo();
+              clearTimers();
+            }
+          }
+        }, 100);
+      }
     }
-  }, [start, end, clearPlayerInterval]);
+  }, [start, end, clearTimers]);
+
+  useEffect(() => {
+    return () => {
+      clearTimers();
+    };
+  }, [clearTimers]);
 
   const playerWidth = Math.min(560, window.innerWidth);
   const playerHeight = (playerWidth * 9) / 16;

@@ -143,7 +143,7 @@
       "HI": "तब नामे मम प्रेम मुरली",
       "BN": "তব নামে মম প্রেম মুরলী",
       "correctOrder": ["in", "your", "name", "my", "love", "flute"],
-      "alternative": ["my", "love", "flute", "in", "your", "name"],
+      "alternative": [["my", "love", "flute", "in", "your", "name"]],
       "start": "2:51.6",
       "end": "3:02"
     },
