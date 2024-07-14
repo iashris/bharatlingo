@@ -106,6 +106,7 @@ const MinimalYouTubeSectionPlayer = forwardRef<
       <div
         className="relative lg:rounded-xl overflow-hidden"
         style={{ width: playerWidth, height: playerHeight }}
+        onClick={playSection}
       >
         <YouTube
           videoId={videoId}
@@ -114,13 +115,13 @@ const MinimalYouTubeSectionPlayer = forwardRef<
           className={isLocalhost ? null : "pointer-events-none"}
         />
       </div>
-      {!showIntroduction && (
+      {/* {!showIntroduction && (
         <Button
           size="large"
           icon={<PlayCircleOutlined />}
           onClick={playSection}
         />
-      )}
+      )} */}
     </div>
   );
 });

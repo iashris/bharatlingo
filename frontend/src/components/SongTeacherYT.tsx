@@ -79,9 +79,7 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   );
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-6 md:px-6 md:py-8 bg-white rounded-lg shadow-md">
-      <Progress percent={progress} className="mb-6" />
-
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-6 md:py-24 pb-4 max-sm:h-screen bg-white rounded-lg shadow-md">
       <YouTubeSectionPlayer
         start={convertTimeToSeconds(song[currentLineIndex].start)}
         end={convertTimeToSeconds(song[currentLineIndex].end)}
@@ -89,6 +87,14 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
         ref={playerRef}
         showIntroduction={showIntroduction}
       />
+      <div className="max-w-xl mx-auto">
+        <Progress
+          percent={progress}
+          showInfo={false}
+          size="small"
+          status="active"
+        />
+      </div>
       {showIntroduction ? (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-4">About this song</h2>
@@ -108,7 +114,7 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
             onComplete={() => handleComplete(currentLineIndex)}
             onSubmit={updateScore}
           />
-          <div className="flex justify-between mt-6">
+          {/* <div className="flex justify-between mt-6">
             <Button
               icon={<LeftOutlined />}
               onClick={handlePrevious}
@@ -122,7 +128,7 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
                 !completedLines[currentLineIndex]
               }
             />
-          </div>
+          </div> */}
         </>
       )}
       <Modal

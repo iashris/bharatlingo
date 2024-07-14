@@ -135,7 +135,7 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg border-2 border-slate-100">
+    <div className="max-w-2xl mx-auto mt-2 md:mt-8 p-6 bg-white rounded-lg border-2 border-slate-100">
       <audio ref={audioRef} />
 
       <div className="flex items-center mb-4">
@@ -148,16 +148,23 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
           />
         )} */}
         <div className="text-center w-full">
-          <h2 className="text-3xl mb-2 font-bold text-black bengali-text">
+          <h2
+            className="md:text-3xl text-xl mb-2 font-bold text-black bengali-text leading-relaxed
+          "
+          >
             {title["BN"]}
           </h2>
-          <h2 className="text-xl text-gray-400 font-semibold">{title["EN"]}</h2>
-          <h2 className="text-xl text-gray-400 font-semibold">{title["HI"]}</h2>
+          <h2 className="md:text-xl text-md text-gray-400 font-semibold">
+            {title["EN"]}
+          </h2>
+          <h2 className="md:text-xl text-md text-gray-400 font-semibold">
+            {title["HI"]}
+          </h2>
         </div>
       </div>
 
       <div className="mb-4 relative">
-        <div className="h-[40px] p-2 pr-12 border border-gray-300 rounded-md flex flex-wrap gap-2">
+        <div className="min-h-[40px] p-2 pr-12 border border-gray-300 rounded-md flex flex-wrap gap-2">
           {selectedWords.map((word, index) => (
             <Button
               key={word.id}
@@ -169,7 +176,7 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
           ))}
         </div>
         <Button
-          className="absolute right-0 top-0 bottom-0 rounded-l-none h-[40px]"
+          className="absolute right-0 top-0 bottom-0 rounded-l-none min-h-[40px]"
           icon={<LeftSquareOutlined />}
           onClick={handleBackspace}
           disabled={selectedWords.length === 0}
@@ -186,11 +193,13 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
               key={option.id}
               onClick={() => handleWordClick(option)}
               size="small"
-              className={`transition-all ${
-                isSelected
-                  ? "bg-gray-200 text-gray-200 pointer-events-none"
-                  : ""
-              }`}
+              style={{
+                backgroundColor: isSelected ? "#f0f0f0" : "white",
+                color: isSelected ? "#bfbfbf" : "inherit",
+                border: isSelected ? "1px solid #d9d9d9" : "1px solid #d9d9d9",
+                cursor: isSelected ? "default" : "pointer",
+              }}
+              disabled={isSelected}
             >
               {option.text}
             </Button>
