@@ -13,7 +13,7 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   song: songObject,
 }) => {
   const navigate = useNavigate();
-  const { song, videoId, name: songName, introduction } = songObject;
+  const { song, videoId, introduction } = songObject;
   const [showIntroduction, setShowIntroduction] = useState(
     Boolean(introduction)
   );
@@ -80,8 +80,8 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-6 md:px-6 md:py-8 bg-white rounded-lg shadow-md">
-      <h1 className="text-3xl font-bold mb-6 text-center">{songName}</h1>
       <Progress percent={progress} className="mb-6" />
+
       <YouTubeSectionPlayer
         start={convertTimeToSeconds(song[currentLineIndex].start)}
         end={convertTimeToSeconds(song[currentLineIndex].end)}

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useMemo } from "react";
 import { Button, message } from "antd";
-import { SoundOutlined, DeleteOutlined } from "@ant-design/icons";
+import { LeftSquareOutlined } from "@ant-design/icons";
 
 interface Word {
   id: string;
@@ -44,7 +44,17 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
   }, [correctOrder]);
 
   const handleWordClick = (word: Word) => {
-    setSelectedWords((prev) => [...prev, word]);
+    if (!selectedWords.some((selected) => selected.id === word.id)) {
+      setSelectedWords((prev) => [...prev, word]);
+    }
+  };
+
+  const handleBackspace = () => {
+    setSelectedWords((prev) => {
+      const newSelected = [...prev];
+      newSelected.pop();
+      return newSelected;
+    });
   };
 
   const handleRemoveWord = (index: number) => {
@@ -71,6 +81,10 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
 
     if (isOrderCorrect) {
       message.success("Correct!");
+      new Audio("/correct.mp3")
+        .play()
+        .catch((e) => console.error("Audio error:", e));
+
       if (trivia) {
         setShowTrivia(true);
       } else {
@@ -78,16 +92,18 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
       }
     } else {
       message.error("Let's try again!");
+      new Audio("/wrong.mp3")
+        .play()
+        .catch((e) => console.error("Audio error:", e));
     }
   };
 
-  const handleRemoveAll = () => {
-    setSelectedWords([]);
-  };
-
-  const handlePlayAudio = () => {
+  const playAudio = (src: string) => {
     if (audioRef.current) {
-      audioRef.current.play();
+      audioRef.current.src = src;
+      audioRef.current
+        .play()
+        .catch((error) => console.error("Error playing sound:", error));
     }
   };
 
@@ -95,10 +111,6 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
     setShowTrivia(false);
     onComplete?.();
   };
-
-  const remainingOptions = randomOptions.filter(
-    (option) => !selectedWords.some((selected) => selected.id === option.id)
-  );
 
   const renderTriviaWithLinks = (trivia: string) => {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -123,77 +135,96 @@ const LanguageLearningComponent: React.FC<LanguageLearningComponentProps> = ({
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg border-2 border-slate-100">
+      <audio ref={audioRef} />
+
       <div className="flex items-center mb-4">
-        {audio && (
+        {/* {audio && (
           <Button
             icon={<SoundOutlined />}
             onClick={handlePlayAudio}
             shape="circle"
             className="mr-2"
           />
-        )}
+        )} */}
         <div className="text-center w-full">
-          <h2 className="text-4xl mb-2 font-bold text-black">{title["BN"]}</h2>
-
-          <h2 className="text-xl text-gray-400 font-semibold">{title["EN"]}</h2>
-          <h2 className="text-xl  text-gray-400 font-semibold">
-            {title["HI"]}
+          <h2 className="text-3xl mb-2 font-bold text-black bengali-text">
+            {title["BN"]}
           </h2>
+          <h2 className="text-xl text-gray-400 font-semibold">{title["EN"]}</h2>
+          <h2 className="text-xl text-gray-400 font-semibold">{title["HI"]}</h2>
         </div>
       </div>
 
-      <div className="mb-4 min-h-[40px] p-2 border border-gray-300 rounded-md flex flex-wrap gap-2">
-        {selectedWords.map((word, index) => (
-          <Button
-            key={word.id}
-            onClick={() => handleRemoveWord(index)}
-            size="small"
-          >
-            {word.text}
-          </Button>
-        ))}
+      <div className="mb-4 relative">
+        <div className="h-[40px] p-2 pr-12 border border-gray-300 rounded-md flex flex-wrap gap-2">
+          {selectedWords.map((word, index) => (
+            <Button
+              key={word.id}
+              onClick={() => handleRemoveWord(index)}
+              size="small"
+            >
+              {word.text}
+            </Button>
+          ))}
+        </div>
+        <Button
+          className="absolute right-0 top-0 bottom-0 rounded-l-none h-[40px]"
+          icon={<LeftSquareOutlined />}
+          onClick={handleBackspace}
+          disabled={selectedWords.length === 0}
+        />
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-2 justify-center min-h-18">
-        {remainingOptions.map((option) => (
-          <Button
-            key={option.id}
-            onClick={() => handleWordClick(option)}
-            size="small"
-          >
-            {option.text}
-          </Button>
-        ))}
+      <div className="mb-4 flex flex-wrap gap-2 justify-center min-h-[24px]">
+        {randomOptions.map((option) => {
+          const isSelected = selectedWords.some(
+            (selected) => selected.id === option.id
+          );
+          return (
+            <Button
+              key={option.id}
+              onClick={() => handleWordClick(option)}
+              size="small"
+              className={`transition-all ${
+                isSelected
+                  ? "bg-gray-200 text-gray-200 pointer-events-none"
+                  : ""
+              }`}
+            >
+              {option.text}
+            </Button>
+          );
+        })}
       </div>
+
       {showTrivia && trivia && (
         <div className="mb-4 p-4 bg-gray-100 rounded-md">
           <p className="text-gray-600">{renderTriviaWithLinks(trivia)}</p>
         </div>
       )}
-      <div className="flex justify-between mb-4">
-        <Button
-          onClick={handleRemoveAll}
-          icon={<DeleteOutlined />}
-          disabled={!selectedWords.length}
-        >
-          Remove All
-        </Button>
+
+      <div className="flex justify-center my-4">
         {showTrivia ? (
-          <Button type="primary" onClick={handleTriviaNext}>
+          <Button
+            type="primary"
+            className="w-36 mt-6"
+            onClick={handleTriviaNext}
+            size="large"
+          >
             Next
           </Button>
         ) : (
           <Button
             type="primary"
+            className="w-36 mt-6"
+            size="large"
             onClick={handleSubmit}
             disabled={selectedWords.length !== correctOrder.length}
           >
             Submit
           </Button>
         )}
-
-        {/* Dev button */}
       </div>
     </div>
   );

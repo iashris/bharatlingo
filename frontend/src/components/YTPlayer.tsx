@@ -12,7 +12,8 @@ import { Button } from "antd";
 import { PlayCircleOutlined } from "@ant-design/icons";
 
 const isLocalhost = window.location.hostname === "localhosxt";
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const isMobile = false;
+// /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 const MinimalYouTubeSectionPlayer = forwardRef<
   {
@@ -90,7 +91,7 @@ const MinimalYouTubeSectionPlayer = forwardRef<
     width: playerWidth,
     playerVars: {
       autoplay: 0,
-      controls: 1,
+      controls: 0,
       disablekb: 1,
       enablejsapi: 0,
       fs: 0,
@@ -102,7 +103,10 @@ const MinimalYouTubeSectionPlayer = forwardRef<
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
+      <div
+        className="relative lg:rounded-xl overflow-hidden"
+        style={{ width: playerWidth, height: playerHeight }}
+      >
         <YouTube
           videoId={videoId}
           opts={opts}
@@ -112,12 +116,10 @@ const MinimalYouTubeSectionPlayer = forwardRef<
       </div>
       {!showIntroduction && (
         <Button
+          size="large"
           icon={<PlayCircleOutlined />}
           onClick={playSection}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
-        >
-          Play
-        </Button>
+        />
       )}
     </div>
   );
