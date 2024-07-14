@@ -8,6 +8,8 @@ import {
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 import { convertTimeToSeconds } from "../helpers";
+import { Button } from "antd";
+import { PlayCircleOutlined } from "@ant-design/icons";
 
 const isLocalhost = window.location.hostname === "localhosxt";
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -90,7 +92,7 @@ const MinimalYouTubeSectionPlayer = forwardRef<
       autoplay: 0,
       controls: 1,
       disablekb: 1,
-      enablejsapi: 1,
+      enablejsapi: 0,
       fs: 0,
       iv_load_policy: 3,
       rel: 0,
@@ -109,12 +111,13 @@ const MinimalYouTubeSectionPlayer = forwardRef<
         />
       </div>
       {!showIntroduction && (
-        <button
+        <Button
+          icon={<PlayCircleOutlined />}
           onClick={playSection}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
         >
-          Play section
-        </button>
+          Play
+        </Button>
       )}
     </div>
   );

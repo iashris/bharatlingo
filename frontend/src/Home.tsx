@@ -35,6 +35,12 @@ const content = [
     id: "HohBnpGUllc",
     difficulty: "hard",
   },
+  {
+    key: "bandhibi",
+    title: "Amar Haath Bandhibi",
+    id: "PA7DKlXCYdU",
+    difficulty: "easy",
+  },
 ];
 
 export const Home = () => {

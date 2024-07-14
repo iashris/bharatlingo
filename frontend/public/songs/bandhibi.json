@@ -1,0 +1,247 @@
+{
+  "name": "Aamar haath bandhibi",
+  "videoId": "PA7DKlXCYdU",
+  "introduction": "This song sung by Sahana Bajpie is a folk song inspired by the Sylheti song 'Amar haath bandhibo faao bandhibo' by Bangladeshi Baul Singer Shah Abdul Kareem. The composition is from the point of view of Radha, and it speaks of a love that is unshackled by any mortal bounds.",
+  "song": [
+    {
+      "BN": "আমার হাত বান্ধিবি পা বান্ধিবি",
+      "EN": "aamar haath bandhibi paa bandhibi",
+      "correctOrder": ["you", "can", "tie", "my", "hands", "and", "legs"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 22.6665,
+      "end": 28.63506
+    },
+    {
+      "BN": "মন বান্ধিবি কেমনে",
+      "EN": "mon bandhibi kemone",
+      "correctOrder": ["how", "will", "you", "tie", "my", "mind"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 28.63506,
+      "end": 34.652651
+    },
+    {
+      "BN": "আমার চোখ বান্ধিবি, মুখ বান্ধিবি",
+      "EN": "amaar chokh bandhibi mukh bandhibi",
+      "correctOrder": ["you", "can", "tie", "my", "eyes", "and", "mouth"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 34.652651,
+      "end": 39.656656
+    },
+    {
+      "BN": "পরান বান্ধিবি কেমনে",
+      "EN": "poran bandhibi kemone",
+      "correctOrder": ["how", "will", "you", "tie", "my", "soul"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 39.656656,
+      "end": 46.033385
+    },
+    {
+      "BN": "আমি না গেলাম যমুনার ঘাটে",
+      "EN": "ami na gelam jamunar ghate",
+      "correctOrder": ["I", "did", "not", "go", "to", "the", "Yamuna", "bank"],
+      "alternative": [
+        ["to", "the", "Yamuna", "bank", "I", "did", "not", "go"],
+        ["the", "Yamuna", "bank", "I", "did", "not", "go", "to"]
+      ],
+      "trivia": "This song is from the perspective of Radha, hence the reference of Yamuna river",
+      "start": 75.35292207792207,
+      "end": 81.708251
+    },
+    {
+      "BN": "না তুলিলাম জল",
+      "EN": "na tulilam jol",
+      "correctOrder": ["I", "did", "not", "fetch", "water"],
+      "alternative": [["water", "I", "did", "not", "fetch"]],
+      "trivia": "",
+      "start": 81.708251,
+      "end": 86.630679
+    },
+    {
+      "BN": "না হেরিলাম তারে সখি",
+      "EN": "na herilam tare shokhi",
+      "correctOrder": [
+        "I",
+        "did",
+        "not",
+        "look",
+        "at",
+        "him",
+        "dear",
+        "friend"
+      ],
+      "alternative": [
+        ["dear", "friend", "I", "did", "not", "look", "at", "him"]
+      ],
+      "trivia": "Shokhi refers to a female friend. Here, Radha is telling her friend that she did not look at him. Him refers to Krishna.",
+      "start": 86.630679,
+      "end": 91.448257
+    },
+    {
+      "BN": "না হইলাম চঞ্চল",
+      "EN": "na hoilam chanchol",
+      "correctOrder": ["I", "was", "not", "restless"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 91.448257,
+      "end": 94.620825
+    },
+    {
+      "BN": "আমার ইচ্ছা বান্ধিবি সোহাগ বান্ধিবি",
+      "EN": "amar ichcha bandhibi shohag bandhibi",
+      "correctOrder": ["you", "can", "tie", "my", "desires", "and", "touches"],
+      "alternative": [[]],
+      "trivia": "Shohag is a tricky word to translate. It loosely means caress or touch but in a loving affectionate manner.",
+      "start": 113.121902,
+      "end": 118.062733
+    },
+    {
+      "BN": "অনুরাগ বান্ধিবি কেমনে",
+      "EN": "onuraag bandhibi kemone",
+      "correctOrder": ["how", "will", "you", "tie", "my", "love"],
+      "alternative": [[]],
+      "trivia": "Radha is saying you can tie all my physical expressions of love, but not the love itself.",
+      "start": 118.062733,
+      "end": 124.165986
+    },
+    {
+      "BN": "আমি না দিলাম কুলিতে কালি",
+      "EN": "ami na dilam kulite kali",
+      "correctOrder": [
+        "I",
+        "did",
+        "not",
+        "bring",
+        "shame",
+        "to",
+        "my",
+        "family"
+      ],
+      "alternative": [[]],
+      "trivia": "Kulite means to my Kul, or to my generation. Kali means dark, in this context, black ink (kalikh) - meaning I did not blacken my family('s reputation)",
+      "start": 183.996828,
+      "end": 190.672124
+    },
+    {
+      "BN": "কলঙ্কেরই জ্বালা",
+      "EN": "kalankerai jaala",
+      "correctOrder": ["fire", "of", "disgrace", ""],
+      "alternative": [[]],
+      "trivia": "Kalank literally means blemish or stain, in figurative sense it means disgrace. Jwala (pronounced Jaala as Bengali simplifies consonant clusters) means fire.",
+      "start": 190.672124,
+      "end": 195.079089
+    },
+    {
+      "BN": "না হয় হইল সে মোরই অঙ্গেরই মালা",
+      "EN": "na hoy hoilo se morei angerei mala",
+      "correctOrder": ["let", "it", "be", "my", "garland", "to", "wear"],
+      "alternative": [["my", "garland", "to", "wear", "let", "it", "be"]],
+      "trivia": "Radha is saying here that while she hasn't actually done anything to disgrace her family, she's willing to bear the shame of her love for Krishna alone, metaphorically wearing the shame like an ornament, rather than letting it affect her family's reputation.",
+      "start": 195.079089,
+      "end": 202.958354
+    },
+    {
+      "BN": "আমার ঘর বান্ধিবি পথ বান্ধিবি",
+      "EN": "amar ghor bandhibi poth bandhibi",
+      "correctOrder": ["you", "can", "tie", "my", "house", "and", "road"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 221.470486,
+      "end": 226.737347
+    },
+    {
+      "BN": "কপাল বান্ধিবি কেমনে",
+      "EN": "kopal bandhibi kemone",
+      "correctOrder": ["how", "will", "you", "tie", "my", "fate"],
+      "alternative": [[]],
+      "trivia": "Kopal literally means forehead. In Hindu belief, your destiny is written in your forehead, thus the analogy here.",
+      "start": 226.737347,
+      "end": 232.856317
+    },
+    {
+      "BN": "আমার হাত বান্ধিবি পা বান্ধিবি মন বান্ধিবি কেমনে",
+      "EN": "amar haath bandhibi pa bandhibi mon bandhibi kemone",
+      "correctOrder": [
+        "you",
+        "can",
+        "tie",
+        "my",
+        "hands",
+        "and",
+        "legs",
+        "but",
+        "how",
+        "will",
+        "you",
+        "tie",
+        "my",
+        "mind?"
+      ],
+      "alternative": [
+        [
+          "you",
+          "can",
+          "tie",
+          "my",
+          "hands",
+          "and",
+          "legs",
+          "but",
+          "how",
+          "you",
+          "will",
+          "tie",
+          "my",
+          "mind?"
+        ]
+      ],
+      "trivia": "",
+      "start": 244.523941,
+      "end": 256.186107
+    },
+    {
+      "BN": "আমার চোখ বান্ধিবি মুখ বান্ধিবি পরাণ বান্ধিবি কেমনে",
+      "EN": "amara chokh bandhibi mukh bandhibi poran bandhibi kemone",
+      "correctOrder": [
+        "you",
+        "can",
+        "tie",
+        "my",
+        "eyes",
+        "and",
+        "mouth",
+        "but",
+        "how",
+        "will",
+        "you",
+        "tie",
+        "my",
+        "soul?"
+      ],
+      "alternative": [
+        [
+          "you",
+          "can",
+          "tie",
+          "my",
+          "eyes",
+          "and",
+          "mouth",
+          "but",
+          "how",
+          "you",
+          "will",
+          "tie",
+          "my",
+          "soul?"
+        ]
+      ],
+      "trivia": "",
+      "start": 256.186107,
+      "end": 267.198759
+    }
+  ]
+}

@@ -91,7 +91,7 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
       />
       {showIntroduction ? (
         <div className="mt-6">
-          <h2 className="text-xl font-semibold mb-4">Introduction</h2>
+          <h2 className="text-xl font-semibold mb-4">About this song</h2>
           <p className="mb-4">{introduction}</p>
           <Button onClick={handleNext} className="w-full">
             Begin
