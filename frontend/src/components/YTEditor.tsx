@@ -67,7 +67,7 @@ const YouTubeAnnotation: React.FC = () => {
       newRecognition.onresult = (event: SpeechRecognitionEvent) => {
         const transcript = event.results[0][0].transcript;
         setIsRecording(false);
-        const transliteratedText = Sanscript.t(transcript, "bengali", "iast")
+        const transliteratedText = Sanscript.t(transcript, "bengali", "itrans")
           .toLowerCase()
           .replace(".", "");
 

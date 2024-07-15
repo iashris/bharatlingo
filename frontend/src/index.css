@@ -1,9 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap");
-/* public-sans-latin-wght-normal */
 @font-face {
   font-family: "Public Sans Variable";
   font-style: normal;
@@ -15,6 +10,12 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* public-sans-latin-wght-normal */
 
 .bengali-text {
   font-family: "Baloo Da 2";
