@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { Button, Modal, Progress } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import LanguageLearningComponent from "./FillBlanks";
 import YouTubeSectionPlayer from "./YTPlayer";
 import { YouTubeFillBlanksActivity } from "../types/common";
@@ -53,11 +52,11 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
     }
   };
 
-  const handlePrevious = () => {
-    if (currentLineIndex > 0) {
-      setCurrentLineIndex(currentLineIndex - 1);
-    }
-  };
+  // const handlePrevious = () => {
+  //   if (currentLineIndex > 0) {
+  //     setCurrentLineIndex(currentLineIndex - 1);
+  //   }
+  // };
 
   const handleNext = () => {
     if (showIntroduction) {

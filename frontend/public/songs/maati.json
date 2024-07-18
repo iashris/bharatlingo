@@ -7,7 +7,6 @@
       "BN": "বাংলার মাটি বাংলার জল",
       "EN": "Banglar mati Banglar jol",
       "correctOrder": ["bengal's", "soil", "bengal's", "water"],
-      "alternative": [],
       "trivia": "",
       "start": 16.857793,
       "end": 21.132649
@@ -16,7 +15,6 @@
       "BN": "বাংলার বায়ু, বাংলার ফল",
       "EN": "Banglar bayu, banglar phal",
       "correctOrder": ["bengal's", "air", "bengal's", "fruit"],
-      "alternative": [],
       "trivia": "",
       "start": 21.132649,
       "end": 25.302467
@@ -25,7 +23,7 @@
       "BN": "পুণ্য হউক পুণ্য হউক পুণ্য হউক হে ভগবান",
       "EN": "punya hauk punya hauk punya hauk he bhagaban",
       "correctOrder": ["let", "them", "be", "sacred", "oh", "God"],
-      "alternative": ["oh", "God", "let", "them", "be", "sacred"],
+      "alternative": [["oh", "God", "let", "them", "be", "sacred"]],
       "trivia": "",
       "start": 25.302467,
       "end": 33.1
@@ -34,7 +32,6 @@
       "BN": "বাংলার ঘর, বাংলার হাট",
       "EN": "Banglar ghar, Banglar haat",
       "correctOrder": ["bengal's", "houses", "bengal's", "markets"],
-      "alternative": [],
       "trivia": "",
       "start": 66.968765,
       "end": 70.83038
@@ -43,7 +40,6 @@
       "BN": "বাংলার বন, বাংলার মাঠ",
       "EN": "Banglar bon, Banglar math",
       "correctOrder": ["bengal's", "forests", "bengal's", "fields"],
-      "alternative": [],
       "trivia": "",
       "start": 70.83038,
       "end": 75.226858
@@ -51,8 +47,8 @@
     {
       "BN": "পূর্ণ হউক পূর্ণ হউক পূর্ণ হউক হে ভগবান",
       "EN": "purna hauk purna hauk purna hauk he bhagaban",
-      "correctOrder": ["let", "them", "be", "sacred", "oh", "God"],
-      "alternative": ["oh", "God", "let", "them", "be", "sacred"],
+      "correctOrder": ["let", "them", "be", "complete", "oh", "God"],
+      "alternative": [["oh", "God", "let", "them", "be", "complete"]],
       "trivia": "",
       "start": 83.704227,
       "end": 91.95632
@@ -70,7 +66,6 @@
         "bengalis'",
         "language"
       ],
-      "alternative": [],
       "trivia": "",
       "start": 129.960005,
       "end": 138.0735
@@ -79,7 +74,7 @@
       "BN": "সত্য হউক সত্য হউক সত্য হউক, হে ভগবান",
       "EN": "satya hauk satya hauk satya hauk, he bhagaban",
       "correctOrder": ["let", "them", "be", "true", "oh", "God"],
-      "alternative": ["oh", "God", "let", "them", "be", "true"],
+      "alternative": [["oh", "God", "let", "them", "be", "true"]],
       "trivia": "",
       "start": 138.116557,
       "end": 146.441959
@@ -88,7 +83,6 @@
       "BN": "বাঙালির প্রাণ, বাঙালির মন",
       "EN": "Banglair pran, Bangalir mon",
       "correctOrder": ["bengalis'", "lives", "bengalis'", "minds"],
-      "alternative": [],
       "trivia": "",
       "start": 188.259353,
       "end": 192.171741
@@ -97,7 +91,7 @@
       "BN": "বাঙালির ঘরে যত ভাই বোন",
       "EN": "bangalir ghare jato bhai bon",
       "correctOrder": ["brothers", "and", "sisters", "in", "bengali", "homes"],
-      "alternative": ["in", "bengali", "homes", "brothers", "and", "sisters"],
+      "alternative": [["in", "bengali", "homes", "brothers", "and", "sisters"]],
       "trivia": "",
       "start": 192.171741,
       "end": 196.497779
@@ -106,7 +100,7 @@
       "BN": "এক হউক এক হউক এক হউক হে ভগবান",
       "EN": "Ek hauk ek hauk ek hauk hey bhagoban",
       "correctOrder": ["let", "them", "be", "one", "oh", "God"],
-      "alternative": ["oh", "God", "let", "them", "be", "one"],
+      "alternative": [["oh", "God", "let", "them", "be", "one"]],
       "trivia": "",
       "start": 196.58638499999998,
       "end": 204.987001

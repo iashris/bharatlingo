@@ -6,7 +6,6 @@
       "BN": "আমার পরান যাহা চায় তুমি তাই গো",
       "EN": "amaro parano jaha chay tumi tai go",
       "correctOrder": ["what", "my", "heart", "desires", "is", "you"],
-      "alternative": [],
       "trivia": "\"Go\" is a term of endearment in Bengali with no direct translation in English. The closest approximant is English \"dear\" or Hindi \"rey\"",
       "start": 18.71101,
       "end": 36.564911
@@ -28,17 +27,19 @@
         "else"
       ],
       "alternative": [
-        "I",
-        "have",
-        "nobody",
-        "and",
-        "nothing",
-        "else",
-        "except",
-        "you",
-        "in",
-        "this",
-        "world"
+        [
+          "I",
+          "have",
+          "nobody",
+          "and",
+          "nothing",
+          "else",
+          "except",
+          "you",
+          "in",
+          "this",
+          "world"
+        ]
       ],
       "trivia": "",
       "start": 36.564911,
@@ -58,7 +59,6 @@
         "for",
         "it"
       ],
-      "alternative": [],
       "trivia": "",
       "start": 67.086629,
       "end": 91.830424
@@ -79,7 +79,6 @@
         "nothing",
         "else"
       ],
-      "alternative": [],
       "trivia": "",
       "start": 91.999057,
       "end": 104.842202
@@ -88,7 +87,6 @@
       "BN": "আমি তোমার বিরহে রহিব বিলীন",
       "EN": "ami tomaro birahe rahibo bilino",
       "correctOrder": ["I", "will", "dissolve", "in", "your", "separation"],
-      "alternative": [],
       "trivia": "",
       "start": 134.977025,
       "end": 141.49144
@@ -97,7 +95,6 @@
       "BN": "তোমাতে করিব বাস",
       "EN": "tomate karibo baash",
       "correctOrder": ["in", "you", "I", "will", "exist"],
-      "alternative": ["I", "will", "exist", "in", "you"],
       "trivia": "",
       "start": 141.49144,
       "end": 147.445439
@@ -115,7 +112,6 @@
         "and",
         "months"
       ],
-      "alternative": [],
       "trivia": "",
       "start": 147.445439,
       "end": 159.168559
@@ -135,7 +131,6 @@
         "return",
         "again"
       ],
-      "alternative": [],
       "trivia": "",
       "start": 183.916356,
       "end": 196.658325
@@ -154,14 +149,7 @@
         "wish"
       ],
       "alternative": [
-        "then",
-        "what",
-        "you",
-        "wish",
-        "I",
-        "hope",
-        "you",
-        "find"
+        ["then", "what", "you", "wish", "I", "hope", "you", "find"]
       ],
       "trivia": "",
       "start": 208.62564,
@@ -171,7 +159,6 @@
       "BN": "আমি যত দুখ পাই গো",
       "EN": "ami joto dukho pai go",
       "correctOrder": ["let", "me", "find", "all", "suffering"],
-      "alternative": [],
       "trivia": "",
       "start": 215.570261,
       "end": 221.877608
@@ -180,7 +167,6 @@
       "BN": "আমার পরান যাহা চায় তুমি  তাই, তুমি তাই গো",
       "EN": "amaro porano jaha chay tumi tai go",
       "correctOrder": ["what", "my", "heart", "desires", "is", "you,", "dear"],
-      "alternative": [],
       "trivia": "",
       "start": 221.563594,
       "end": 239.565545

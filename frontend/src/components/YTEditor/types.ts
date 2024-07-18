@@ -13,4 +13,5 @@ export interface JsonData {
   videoId: string;
   introduction: string;
   song: Annotation[];
+  language?: string;
 }

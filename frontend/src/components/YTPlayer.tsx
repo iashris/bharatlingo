@@ -8,10 +8,8 @@ import {
 import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 import { convertTimeToSeconds } from "../helpers";
-import { Button } from "antd";
-import { PlayCircleOutlined } from "@ant-design/icons";
 
-const isLocalhost = window.location.hostname === "localhosxt";
+const isLocalhost = window.location.hostname === "localhost";
 const isMobile = false;
 // /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -20,7 +18,7 @@ const MinimalYouTubeSectionPlayer = forwardRef<
     playSection: () => void;
   },
   MinimalYouTubeSectionPlayerProps
->(({ videoId, start, end, showIntroduction }, ref) => {
+>(({ videoId, start, end }, ref) => {
   const playerRef = useRef<YouTubePlayer | null>(null);
 
   useImperativeHandle(ref, () => ({
@@ -93,7 +91,7 @@ const MinimalYouTubeSectionPlayer = forwardRef<
       autoplay: 0,
       controls: 0,
       disablekb: 1,
-      enablejsapi: 0,
+      enablejsapi: 1,
       fs: 0,
       iv_load_policy: 3,
       rel: 0,

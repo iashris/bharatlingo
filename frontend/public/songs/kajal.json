@@ -1,0 +1,312 @@
+{
+  "name": "Gulabi Sadi",
+  "videoId": "B_6d3RBiEN0",
+  "introduction": "A viral song released recently, Gulabi Sari by Sanju Rathod is a catchy Marathi tune to vibe to, and also a lot of conversational words that make it perfect for a beginner Marathi learner.",
+  "song": [
+    {
+      "BN": "काजळ लावुनी आले मी आज",
+      "EN": "kajal lavuni ale mi aj",
+      "correctOrder": ["I", "have", "come", "wearing", "kohl", "today"],
+      "alternative": [
+        ["I", "have", "come", "today", "wearing", "kohl"],
+        ["wearing", "kohl", "I", "have", "come", "today"]
+      ],
+      "trivia": "",
+      "start": 17.043697,
+      "end": 20.416733
+    },
+    {
+      "BN": "असं नका बघू, अहो, येते मला लाज",
+      "EN": "asa naka baghu, aho, yete mala laja",
+      "correctOrder": [
+        "don't",
+        "look",
+        "at",
+        "me",
+        "like",
+        "this,",
+        "I",
+        "feel",
+        "shy"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 20.416733,
+      "end": 24.07294
+    },
+    {
+      "BN": "केला श्रृंगार आज घातलाया साज",
+      "EN": "kela shringara aja ghatalaya saz",
+      "correctOrder": [
+        "I",
+        "have",
+        "put",
+        "make-up",
+        "today",
+        "and",
+        "dressed",
+        "up"
+      ],
+      "alternative": [
+        ["I", "have", "dressed", "up", "and", "put", "make-up", "today"],
+        ["today", "I", "have", "dressed", "up", "and", "put", "make-up"],
+        ["today", "I", "have", "put", "make-up", "and", "dressed", "up"]
+      ],
+      "trivia": "",
+      "start": 24.07294,
+      "end": 27.975389
+    },
+    {
+      "BN": "दिसते मी भारी, जणू अप्सरा मी खास",
+      "EN": "disate mi bhari, jaNu apsara mi khas",
+      "correctOrder": [
+        "I",
+        "look",
+        "amazing",
+        "like",
+        "a",
+        "special",
+        "heavenly",
+        "maiden"
+      ],
+      "alternative": [
+        ["I", "look", "heavenly", "like", "a", "special", "amazing", "maiden"]
+      ],
+      "trivia": "",
+      "start": 27.975389,
+      "end": 31.544467
+    },
+    {
+      "BN": "अए, नखरेवाली, कुठे निघाली",
+      "EN": "ae, nakharevali, kuthe nighali",
+      "correctOrder": [
+        "oh,",
+        "tantrum-disher,",
+        "where",
+        "are",
+        "you",
+        "going"
+      ],
+      "alternative": [[]],
+      "trivia": "Nakhre wali is a hard to translate term but it means someone who throws a lot of tantrum, but in a flirty way",
+      "start": 31.544467,
+      "end": 33.730316
+    },
+    {
+      "BN": "घालुनी साडी लाल-गुलाबी",
+      "EN": "ghaluni sadi lala-gulabi",
+      "correctOrder": ["wearing", "a", "reddish", "pink", "sari"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 33.730316,
+      "end": 35.894778
+    },
+    {
+      "BN": "पागल करते तुझी मोरनीशी चाल",
+      "EN": "pagal karate tujhi moranishi chala",
+      "correctOrder": [
+        "your",
+        "peacock",
+        "walk",
+        "is",
+        "driving",
+        "me",
+        "crazy"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 35.894778,
+      "end": 39.026104
+    },
+    {
+      "BN": "गुलाबी साडी आणि लाली लाल लाल",
+      "EN": "gulabi sadi ani lali lala lala",
+      "correctOrder": ["pink", "sari", "and", "red", "lipstick"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 39.026104,
+      "end": 42.764567
+    },
+    {
+      "BN": "दिसते मी भारी, राजा, photo माझा काढ",
+      "EN": "disate mi bhari, raja, photo majha kadha",
+      "correctOrder": [
+        "I",
+        "look",
+        "amazing,",
+        "oh",
+        "king,",
+        "click",
+        "my",
+        "photo"
+      ],
+      "alternative": [[]],
+      "trivia": "The song is sung by a male singer, but is from the POV of the girl. Therefore, he says 'Oh king (hey mister!), click a photo of me'",
+      "start": 42.764567,
+      "end": 47.115701
+    },
+    {
+      "BN": "गुलाबी साडी आणि लाली लाल-लाल दिसते मी भारी, राजा, photo माझा काढ",
+      "EN": "gulabi sadi ani lali lala-lala disate mi bhari, raja, photo majha kadha",
+      "correctOrder": [
+        "I",
+        "look",
+        "amazing",
+        "wearing",
+        "pink",
+        "sari",
+        "and",
+        "red",
+        "lipstick,",
+        "hey",
+        "mister,",
+        "click",
+        "a",
+        "photo"
+      ],
+      "alternative": [
+        [
+          "wearing",
+          "pink",
+          "sari",
+          "and",
+          "red",
+          "lipstick,",
+          "I",
+          "look",
+          "amazing",
+          "hey",
+          "mister,",
+          "click",
+          "a",
+          "photo"
+        ],
+        [
+          "wearing",
+          "pink",
+          "sari",
+          "and",
+          "red",
+          "lipstick,",
+          "I",
+          "look",
+          "amazing",
+          "hey",
+          "mister,",
+          "click",
+          "a",
+          "photo"
+        ]
+      ],
+      "trivia": "",
+      "start": 47.115701,
+      "end": 54.272077
+    },
+    {
+      "BN": "अदा माझी simple, नसले जरी dimple",
+      "EN": "ada majhi simple, nasale jari dimple",
+      "correctOrder": [
+        "my",
+        "style",
+        "is",
+        "simple,",
+        "even",
+        "though",
+        "I",
+        "have",
+        "no",
+        "dimple"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 136.24188311688312,
+      "end": 140.430385
+    },
+    {
+      "BN": "Heroine दिसते, मी heroine",
+      "EN": "heroine disate, mi heroine",
+      "correctOrder": ["I", "look", "like", "a", "heroine"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 140.430385,
+      "end": 143.560206
+    },
+    {
+      "BN": "थोडे दिवस थांब अशी line लागीन लांब मी पण",
+      "EN": "thode divasa thamba ashi line lagina lamba mi pana",
+      "correctOrder": [
+        "wait",
+        "for",
+        "a",
+        "few",
+        "days,",
+        "there'll",
+        "be",
+        "a",
+        "long",
+        "line",
+        "for",
+        "me"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 143.560206,
+      "end": 148.128431
+    },
+    {
+      "BN": "बनूनच दाखवीन heroine",
+      "EN": "banunacha dakhavina heroine",
+      "correctOrder": ["I", "will", "show", "you", "becoming", "a", "heroine"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 148.128431,
+      "end": 150.957793
+    },
+    {
+      "BN": "पुरी करीन तुझी हर एक wish",
+      "EN": "puri karina tujhi hara eka wish",
+      "correctOrder": ["I", "will", "fulfill", "all", "your", "wishes"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 166.937499,
+      "end": 170.184635
+    },
+    {
+      "BN": "नको करु शंका, ना सवाल",
+      "EN": "nako karu shamka, na savala",
+      "correctOrder": ["don't", "have", "any", "doubts", "or", "questions"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 170.184635,
+      "end": 173.71098
+    },
+    {
+      "BN": "हाय, गुलाबी साडी आणि लाली लाल-लाल",
+      "EN": "haya, gulabi sadi ani lali lala-lala",
+      "correctOrder": ["pink", "sari", "and", "red", "lipstick"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 173.71098,
+      "end": 177.961323
+    },
+    {
+      "BN": "दिसते ती भारी म्हणे, \"photo माझा काढ\"",
+      "EN": "disate ti bhari mhane, \"photo majha kadha\"",
+      "correctOrder": [
+        "she",
+        "looks",
+        "amazing",
+        "and",
+        "says",
+        "click",
+        "my",
+        "photo"
+      ],
+      "alternative": [[]],
+      "trivia": "Notice how the line initially was 'disate mi bhari' meaning I look amazing - because the singer was singing from the POV of the girl. Towards the end, he shifts the POV to himself, and therefore says, 'she looks amazing'. Mhane means say.",
+      "start": 177.961323,
+      "end": 196.089999
+    }
+  ],
+  "language": "marathi"
+}

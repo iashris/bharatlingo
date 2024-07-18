@@ -41,6 +41,19 @@ const content = [
     id: "PA7DKlXCYdU",
     difficulty: "easy",
   },
+  {
+    key: "ekla",
+    title: "Ekla Cholo Re",
+    id: "i5hQ6yBfZRE",
+    difficulty: "medium",
+  },
+  {
+    key: "kajal",
+    title: "Gulabi Sadi",
+    id: "B_6d3RBiEN0",
+    difficulty: "medium",
+    language: "Marathi",
+  },
 ];
 
 export const Home = () => {
@@ -78,6 +91,9 @@ export const Home = () => {
                 }
               >
                 {item.difficulty}
+              </Tag>
+              <Tag className="mt-2 text-xs" color="blue">
+                {item.language || "Bengali"}
               </Tag>
             </Card>
           ))}

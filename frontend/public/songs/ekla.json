@@ -1,0 +1,292 @@
+{
+  "name": "Ekla Cholo Re",
+  "videoId": "i5hQ6yBfZRE",
+  "introduction": "\"Ekla Cholo Re\" is an iconic Bengali song written and composed by Rabindranath Tagore, the renowned Indian poet, philosopher, and Nobel laureate. The title translates to \"Walk Alone\" in English. This song is celebrated for its powerful message of self-reliance, courage, and perseverance in the face of adversity. It encourages individuals to continue on their chosen path even when others may not join or support them. The song has become deeply ingrained in Bengali culture and has been widely adopted across India as an anthem of personal strength and social reform. ",
+  "song": [
+    {
+      "BN": "যদি তোর ডাক শুনে কেউ না আসে",
+      "EN": "jodi tor dak shune keu na ashe",
+      "correctOrder": [
+        "if",
+        "nobody",
+        "comes",
+        "listening",
+        "to",
+        "your",
+        "call"
+      ],
+      "alternative": [
+        ["if", "listening", "to", "your", "call", "nobody", "comes"],
+        ["listening", "to", "your", "call", "if", "nobody", "comes"]
+      ],
+      "trivia": "This song gained national popularity after it was featured in the film Kahaani starring Vidya Balan. The film was also based in Kolkata.",
+      "start": 12.703207,
+      "end": 16.979582
+    },
+    {
+      "BN": "তবে একলা চলো রে",
+      "EN": "tabe ekla chalo re",
+      "correctOrder": ["oh", "then", "walk", "alone"],
+      "alternative": [
+        ["oh", "walk", "alone", "then"],
+        ["then", "walk", "alone", "oh"]
+      ],
+      "trivia": "Re is almost an untranslatable word in English, but it roughly translates to hey or oh",
+      "start": 16.979582,
+      "end": 19.644613
+    },
+    {
+      "BN": "যদি তোর ডাক শুনে কেউ না আসে তবে একলা চলো রে",
+      "EN": "jodi tor dak shune keu na ashe tobe ekla cholo re",
+      "correctOrder": [
+        "if",
+        "nobody",
+        "comes",
+        "listening",
+        "to",
+        "your",
+        "call,",
+        "then",
+        "walk",
+        "alone"
+      ],
+      "alternative": [
+        [
+          "if",
+          "nobody",
+          "comes",
+          "listening",
+          "to",
+          "your",
+          "call,",
+          "walk",
+          "alone",
+          "then"
+        ]
+      ],
+      "trivia": "This song was written at Giridih town in modern-day Jharkhand. It became one of the key songs for the Anti-Partition Movement in Bengal Presidency in 1905, and was one of Gandhiji's favorite songs.",
+      "start": 19.644613,
+      "end": 27.345817
+    },
+    {
+      "BN": "যদি কেউ কথা না কয়",
+      "EN": "jodi keu kotha na kohe",
+      "correctOrder": ["if", "nobody", "speaks", "to", "you"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 53.017138,
+      "end": 55.579738
+    },
+    {
+      "BN": "ওরে ও অভাগা, যদি কেউ কথা না কয়",
+      "EN": "ore o abhaga jodi keu katha na kohe",
+      "correctOrder": [
+        "oh",
+        "unlucky",
+        "one,",
+        "if",
+        "nobody",
+        "speaks",
+        "to",
+        "you"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 55.579738,
+      "end": 61.286246
+    },
+    {
+      "BN": "যদি সবাই থাকে মুখ ফেরায়",
+      "EN": "jodi shobai thake mukh phiraye",
+      "correctOrder": ["if", "everybody", "turns", "their", "faces", "away"],
+      "alternative": [[]],
+      "trivia": "Jodi Shobai thake mukh phiraye literally means 'If everybody stays face-turned' ",
+      "start": 61.286246,
+      "end": 64.9342
+    },
+    {
+      "BN": "যদি সবাই করে ভয়",
+      "EN": "jodi shobai kore bhoy",
+      "correctOrder": ["if", "everybody", "fears"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 64.9342,
+      "end": 67.053284
+    },
+    {
+      "BN": "যদি সবাই থাকে মুখ ফেরায় সবাই করে ভয়",
+      "EN": "jodi shobai thake mukh phiraye shobai kore bhoy",
+      "correctOrder": [
+        "if",
+        "everyone",
+        "turns",
+        "their",
+        "faces",
+        "away",
+        "in",
+        "fear"
+      ],
+      "alternative": [
+        ["if", "everyone", "in", "fear", "turns", "their", "faces", "away"]
+      ],
+      "trivia": "",
+      "start": 67.053284,
+      "end": 72.839192
+    },
+    {
+      "BN": "তবে পরান খোলে",
+      "EN": "tobe poran khole",
+      "correctOrder": ["then", "open", "your", "soul"],
+      "alternative": [[]],
+      "trivia": "this sentence literally means 'then, having bared your soul' or in Hindi 'tab apne praan ko khol kar'",
+      "start": 72.839192,
+      "end": 75.737227
+    },
+    {
+      "BN": "ও তুই মুখ ফুটে তোর মনের কথা একলা বলো রে",
+      "EN": "o tui mukh phote tor moner katha ekla bolo re",
+      "correctOrder": ["and", "speak", "your", "mind", "all", "alone"],
+      "alternative": [["and", "all", "alone", "speak", "your", "mind"]],
+      "trivia": "O is a poetic way in Bengali to say 'and'",
+      "start": 75.737227,
+      "end": 81.175025
+    },
+    {
+      "BN": "যদি আলো না ধরে",
+      "EN": "jodi alo na dhore",
+      "correctOrder": ["if", "nobody", "shines", "light"],
+      "alternative": [[]],
+      "trivia": "dhore literally means holds, so 'if nobody holds light'",
+      "start": 134.455141,
+      "end": 137.687595
+    },
+    {
+      "BN": "ওরে ওরে ও অভাগা, যদি আলো না ধরে",
+      "EN": "ore ore o abhaga, jodi alo na dhare",
+      "correctOrder": [
+        "oh",
+        "unlucky",
+        "one,",
+        "if",
+        "nobody",
+        "shines",
+        "light"
+      ],
+      "alternative": [
+        ["if", "nobody", "shines", "light", "oh", "unlucky", "one,"]
+      ],
+      "trivia": "",
+      "start": 137.687595,
+      "end": 143.343711
+    },
+    {
+      "BN": "যদি ঝড়-বাদলে আঁধার রাতে",
+      "EN": "jodi jhad badole andhar ratey",
+      "correctOrder": ["if", "during", "thunderstorm", "in", "dark", "night"],
+      "alternative": [["if", "in", "dark", "night", "during", "thunderstorm"]],
+      "trivia": "",
+      "start": 143.343711,
+      "end": 147.018329
+    },
+    {
+      "BN": "দুয়ার দেয় ঘরে",
+      "EN": "duaar dey ghore",
+      "correctOrder": ["they", "shut", "the", "door"],
+      "alternative": [[]],
+      "trivia": "this phrase literally means -- they give (দেয়/dey) door (দুয়ার/duaar) in house (ঘরে/ghore). In bengali, 'to give door' is a way of saying to lock the house.",
+      "start": 147.018329,
+      "end": 149.037787
+    },
+    {
+      "BN": "যদি ঝড়-বাদলে আঁধার রাতে দুয়ার দেয় ঘরে",
+      "EN": "Jodi jhor-badole adhar rate duar dae ghore",
+      "correctOrder": [
+        "if",
+        "they",
+        "shut",
+        "their",
+        "door",
+        "during",
+        "thunderstorms",
+        "in",
+        "night"
+      ],
+      "alternative": [
+        [
+          "if",
+          "during",
+          "thunderstorms",
+          "they",
+          "shut",
+          "their",
+          "door",
+          "in",
+          "night"
+        ],
+        [
+          "if",
+          "they",
+          "shut",
+          "in",
+          "night",
+          "their",
+          "door",
+          "during",
+          "thunderstorms"
+        ],
+        [
+          "if",
+          "in",
+          "night",
+          "during",
+          "thunderstorms",
+          "they",
+          "shut",
+          "their",
+          "door"
+        ]
+      ],
+      "trivia": "",
+      "start": 149.037787,
+      "end": 155.155064
+    },
+    {
+      "BN": "তবে বজ্রানলে",
+      "EN": "tobe bajranole",
+      "correctOrder": ["then", "with", "the", "lightning", "fire"],
+      "alternative": [["then", "with", "the", "fire", "lightning"]],
+      "trivia": "Bajranole is a combination of Bajra (lightning) and Anal (fire). Thus, Bajranal means lightning fire and Bajranale means with the lightning fire",
+      "start": 155.155064,
+      "end": 157.866661
+    },
+    {
+      "BN": "আপন বুকের পাঁজর জ্বালিয়ে নিয়ে একলা জ্বলো রে",
+      "EN": "apon buker panjor jaliye niye ekla jolo re",
+      "correctOrder": ["burn", "alone", "burning", "your", "rib-cage"],
+      "alternative": [["burning", "your", "rib-cage", "burn", "alone"]],
+      "trivia": "Buker Panjor means rib-cage. Buk means heart, Buker means heart's and Panjor means cage.",
+      "start": 157.463309,
+      "end": 163.290344
+    },
+    {
+      "BN": "যদি তোর ডাক শুনে কেউ না আসে তবে একলা চলো রে",
+      "EN": "Jodi tor dak shune keu na eshe tobe ekla cholo re",
+      "correctOrder": [
+        "if",
+        "nobody",
+        "comes",
+        "listening",
+        "to",
+        "your",
+        "call,",
+        "walk",
+        "alone"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 163.290344,
+      "end": 178.365491
+    }
+  ],
+  "language": "bengali"
+}

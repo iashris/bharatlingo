@@ -10,15 +10,18 @@ export const validateAlternative = (
 };
 
 export const downloadJson = (
+  name: string,
   annotations: Annotation[],
   videoId: string,
-  introduction: string
+  introduction: string,
+  language?: string
 ) => {
   const jsonData: JsonData = {
-    name: annotations[0]?.EN || "Untitled",
+    name: name || "Untitled",
     videoId: videoId,
     introduction: introduction,
     song: annotations,
+    language: language || "bengali",
   };
   const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
     type: "application/json",

@@ -7,7 +7,7 @@
       "BN": "আমি তোমার সঙ্গে বেঁধেছি আমার প্রাণ",
       "EN": "ami tomaro sange bendhechi amaro praan",
       "correctOrder": ["I", "have", "tied", "my", "life", "with", "you"],
-      "alternative": ["I", "have", "tied", "with", "you", "my", "life"],
+      "alternative": [["I", "have", "tied", "with", "you", "my", "life"]],
       "trivia": "",
       "start": 9.709983000000001,
       "end": 18.316527
@@ -16,7 +16,6 @@
       "BN": "সুরের বাঁধনে",
       "EN": "surero bandhane",
       "correctOrder": ["in", "the", "knots", "of", "music"],
-      "alternative": [],
       "trivia": "",
       "start": 18.316527,
       "end": 22.79236
@@ -37,7 +36,6 @@
       "BN": "অজানা সাধনে",
       "EN": "ajana sadhane",
       "correctOrder": ["with", "a", "lot", "of", "toil"],
-      "alternative": [],
       "trivia": "",
       "start": 31.710228,
       "end": 35.726186
@@ -120,14 +118,7 @@
         "name"
       ],
       "alternative": [
-        "you",
-        "don't",
-        "know",
-        "I",
-        "have",
-        "covered",
-        "your",
-        "name"
+        ["you", "don't", "know", "I", "have", "covered", "your", "name"]
       ],
       "trivia": "",
       "start": 80.61996599999999,
@@ -137,7 +128,6 @@
       "BN": "রঙিন ছায়ার আচ্ছাদনে",
       "EN": "rangino chayar achchadane",
       "correctOrder": ["in", "veil", "of", "colorful", "shades"],
-      "alternative": [],
       "trivia": "",
       "start": 91.668419,
       "end": 98.452814
@@ -146,7 +136,7 @@
       "BN": "আমি তোমার সঙ্গে বেঁধেছি আমার প্রাণ",
       "EN": "ami tomaro sange bendhechi amaro praan",
       "correctOrder": ["I", "have", "tied", "my", "life", "with", "you"],
-      "alternative": ["I", "have", "tied", "with", "you", "my", "life"],
+      "alternative": [["I", "have", "tied", "with", "you", "my", "life"]],
       "trivia": "",
       "start": 98.452814,
       "end": 108.412013
@@ -155,7 +145,6 @@
       "BN": "সুরের বাঁধনে",
       "EN": "surero bandhane",
       "correctOrder": ["in", "the", "knots", "of", "music"],
-      "alternative": [],
       "trivia": "",
       "start": 108.412013,
       "end": 113.789748
