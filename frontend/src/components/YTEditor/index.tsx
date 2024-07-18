@@ -7,11 +7,12 @@ import {
   DeleteOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
-import { JsonData } from "./types";
+import { ChallengeWithMetadata, JsonData } from "./types";
 import { validateAlternative, downloadJson } from "./utils";
 import { Input, Button, Space, Form } from "antd";
 import { Annotation } from "./types";
 import Sanscript from "@indic-transliteration/sanscript";
+import ChallengeEditor from "./ChallengeEditor";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -52,6 +53,7 @@ const YouTubeAnnotation: React.FC = () => {
   const playerRef = useRef<YouTubePlayer | null>(null);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
   const [selectedLanguage, setSelectedLanguage] = useState(LANGUAGES[0]);
+  const [challenges, setChallenges] = useState<ChallengeWithMetadata[]>([]);
   const [currentAnnotation, setCurrentAnnotation] = useState<Annotation>({
     BN: "",
     EN: "",
@@ -60,6 +62,7 @@ const YouTubeAnnotation: React.FC = () => {
     trivia: "",
     start: 0,
     end: 0,
+    challengeIds: [],
   });
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<string>("1");
@@ -196,13 +199,18 @@ const YouTubeAnnotation: React.FC = () => {
         return;
       }
 
+      const newAnnotation: Annotation = {
+        ...currentAnnotation,
+        challengeIds: currentAnnotation.challengeIds || [],
+      };
+
       let newAnnotations: Annotation[];
       if (editingIndex !== null) {
         newAnnotations = annotations.map((ann, index) =>
-          index === editingIndex ? currentAnnotation : ann
+          index === editingIndex ? newAnnotation : ann
         );
       } else {
-        newAnnotations = [...annotations, currentAnnotation];
+        newAnnotations = [...annotations, newAnnotation];
       }
 
       newAnnotations = sortAnnotations(newAnnotations);
@@ -221,8 +229,9 @@ const YouTubeAnnotation: React.FC = () => {
         trivia: "",
         start: newAnnotations[newAnnotations.length - 1].end,
         end: newAnnotations[newAnnotations.length - 1].end,
+        challengeIds: [],
       });
-      setActiveTab("2");
+      // setActiveTab("2");
     } else {
       message.warning("Please fill in all required fields.");
     }
@@ -287,8 +296,13 @@ const YouTubeAnnotation: React.FC = () => {
         trivia: "",
         start: jsonData.song[jsonData.song.length - 1].end,
         end: jsonData.song[jsonData.song.length - 1].end,
+        challengeIds: [],
       });
     }
+    setChallenges(jsonData.challenges || []);
+    setSelectedLanguage(
+      LANGUAGES.find((lang) => lang.name === jsonData.language) || LANGUAGES[0]
+    );
   };
 
   const handleAnnotationClick = (index: number) => {
@@ -376,11 +390,69 @@ const YouTubeAnnotation: React.FC = () => {
           className="mt-4"
           rows={4}
         />
+        <Space className="mt-4">
+          <Button
+            type="primary"
+            icon={<DownloadOutlined />}
+            onClick={() =>
+              downloadJson(
+                name,
+                annotations,
+                videoId,
+                introduction,
+                selectedLanguage.name,
+                challenges
+              )
+            }
+          >
+            Download JSON
+          </Button>
+          <Upload
+            accept=".json"
+            showUploadList={false}
+            customRequest={({ file, onSuccess }: any) => {
+              setTimeout(() => {
+                onSuccess("ok", file);
+              }, 0);
+            }}
+            onChange={handleUpload}
+          >
+            <Button icon={<UploadOutlined />}>Upload JSON</Button>
+          </Upload>
+        </Space>
       </div>
       <div className="w-full md:w-1/2 pl-4">
         <Tabs activeKey={activeTab} onChange={setActiveTab}>
           <TabPane tab="Edit Annotation" key="1">
             <Form layout="vertical">
+              <Form.Item label="Start Time:">
+                <Space>
+                  <Input
+                    value={currentAnnotation.start.toFixed(2)}
+                    onChange={onInputChange}
+                    name="start"
+                  />
+                  <Button onClick={() => onSetTime("start")}>
+                    Set Current Time
+                  </Button>
+                  <Button onClick={() => onGoToTime("start")}>
+                    Go to time
+                  </Button>
+                </Space>
+              </Form.Item>
+              <Form.Item label="End Time:">
+                <Space>
+                  <Input
+                    value={currentAnnotation.end.toFixed(2)}
+                    onChange={onInputChange}
+                    name="end"
+                  />
+                  <Button onClick={() => onSetTime("end")}>
+                    Set Current Time
+                  </Button>
+                  <Button onClick={() => onGoToTime("end")}>Go to time</Button>
+                </Space>
+              </Form.Item>
               <Form.Item label={selectedLanguage.name + ":"}>
                 <Space>
                   <Input
@@ -436,35 +508,33 @@ const YouTubeAnnotation: React.FC = () => {
                   rows={4}
                 />
               </Form.Item>
-              <Form.Item label="Start Time:">
-                <Space>
-                  <Input
-                    value={currentAnnotation.start.toFixed(2)}
-                    onChange={onInputChange}
-                    name="start"
-                  />
-                  <Button onClick={() => onSetTime("start")}>
-                    Set Current Time
-                  </Button>
-                  <Button onClick={() => onGoToTime("start")}>
-                    Go to time
-                  </Button>
-                </Space>
+              <Form.Item label="Associated Challenges">
+                <Select
+                  mode="multiple"
+                  placeholder="Select associated challenges"
+                  value={currentAnnotation.challengeIds || []}
+                  onChange={(selectedIds) =>
+                    setCurrentAnnotation((prev) => ({
+                      ...prev,
+                      challengeIds: selectedIds,
+                    }))
+                  }
+                >
+                  {challenges.map((challenge) => (
+                    <Select.Option key={challenge.id} value={challenge.id}>
+                      {challenge.type === "mcq"
+                        ? challenge.question
+                        : challenge.prompt}
+                    </Select.Option>
+                  ))}
+                </Select>
               </Form.Item>
-              <Form.Item label="End Time:">
-                <Space>
-                  <Input
-                    value={currentAnnotation.end.toFixed(2)}
-                    onChange={onInputChange}
-                    name="end"
-                  />
-                  <Button onClick={() => onSetTime("end")}>
-                    Set Current Time
-                  </Button>
-                  <Button onClick={() => onGoToTime("end")}>Go to time</Button>
-                </Space>
-              </Form.Item>
-              <Button onClick={onSubmit}>
+
+              <Button
+                onClick={onSubmit}
+                type="primary"
+                className="bg-green-600 text-white"
+              >
                 {isEditing ? "Update Annotation" : "Add Annotation"}
               </Button>
             </Form>
@@ -512,36 +582,14 @@ const YouTubeAnnotation: React.FC = () => {
               </div>
             ))}
           </TabPane>
+          <TabPane tab="Challenges" key="3">
+            <ChallengeEditor
+              challenges={challenges}
+              onChallengeChange={setChallenges}
+              isSpeechEnabled={selectedLanguage.voice === 1}
+            />
+          </TabPane>
         </Tabs>
-        <Space className="mt-4">
-          <Button
-            type="primary"
-            icon={<DownloadOutlined />}
-            onClick={() =>
-              downloadJson(
-                name,
-                annotations,
-                videoId,
-                introduction,
-                selectedLanguage.name
-              )
-            }
-          >
-            Download JSON
-          </Button>
-          <Upload
-            accept=".json"
-            showUploadList={false}
-            customRequest={({ file, onSuccess }: any) => {
-              setTimeout(() => {
-                onSuccess("ok", file);
-              }, 0);
-            }}
-            onChange={handleUpload}
-          >
-            <Button icon={<UploadOutlined />}>Upload JSON</Button>
-          </Upload>
-        </Space>
       </div>
     </div>
   );

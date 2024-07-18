@@ -1,4 +1,4 @@
-import { Annotation, JsonData } from "./types";
+import { Annotation, ChallengeWithMetadata, JsonData } from "./types";
 
 export const validateAlternative = (
   correctOrder: string[],
@@ -14,7 +14,8 @@ export const downloadJson = (
   annotations: Annotation[],
   videoId: string,
   introduction: string,
-  language?: string
+  language?: string,
+  challenges?: ChallengeWithMetadata[]
 ) => {
   const jsonData: JsonData = {
     name: name || "Untitled",
@@ -22,6 +23,7 @@ export const downloadJson = (
     introduction: introduction,
     song: annotations,
     language: language || "bengali",
+    challenges,
   };
   const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
     type: "application/json",

@@ -1,0 +1,225 @@
+{
+  "name": "Munbe Vaa",
+  "videoId": "UPQZ4vuvW2s",
+  "introduction": "Shreya Ghoshal won the Tamil Nadu State Film Awards and Filmfare Awards South for Best Female Playback Singer for the rendition of this song \"Munbe Vaa\", one of the finest AR Rahman songs",
+  "song": [
+    {
+      "BN": "முன்பே வா என் அன்பே வா",
+      "EN": "Munbe Vaa En Anbe Vaa",
+      "correctOrder": ["come", "in", "front", "of", "me,", "dear", "come"],
+      "alternative": [["dear", "come", "in", "front", "of", "me,", "come"]],
+      "trivia": "Vaa means \"come\"",
+      "start": 43.30401833333333,
+      "end": 46.635848,
+      "challengeIds": []
+    },
+    {
+      "BN": "ஊனே வா உயிரே வா",
+      "EN": "Oonae vaa uyirae vaa",
+      "correctOrder": ["come", "my", "soul", "come", "my", "body"],
+      "alternative": [["my", "soul", "come", "my", "body", "come"]],
+      "trivia": "Oon means soul in Tamil. Uyir means life. When you call someone, you add -e in the end, thus we get Oone and Uyire",
+      "start": 46.635848,
+      "end": 50.048222,
+      "challengeIds": []
+    },
+    {
+      "BN": "முன்பே வா என் அன்பே வா",
+      "EN": "Munbe Vaa En Anbe Vaa",
+      "correctOrder": ["come", "in", "front", "of", "me,", "dear", "come"],
+      "alternative": [["dear", "come", "in", "front", "of", "me,", "come"]],
+      "trivia": "",
+      "start": 50.048222,
+      "end": 53.422266,
+      "challengeIds": []
+    },
+    {
+      "BN": "பூ பூவாய் பூப்போம் வா",
+      "EN": "Poo Poovai Poopom Va",
+      "correctOrder": ["come", "flower,", "let's", "bloom", "together"],
+      "alternative": [["flower,", "let's", "bloom", "together", "come"]],
+      "trivia": "This is a beautiful phrase\nPoo (flower)\nPoovai (like flowers)\nPoopom (let's bloom)\nThis creates an onomatopoeic rhythm ",
+      "start": 53.422266,
+      "end": 57.747252,
+      "challengeIds": []
+    },
+    {
+      "BN": "நான் நானா கேட்டேன் என்னை நானே",
+      "EN": "Naan naana keten ennai naanae",
+      "correctOrder": ["I", "asked", "myself", "is", "it", "really", "me"],
+      "alternative": [["is", "it", "really", "me", "I", "asked", "myself"]],
+      "trivia": "Naan is I, Naana: Is it really me, Keten: I asked, Ennai: to myself, Naanae: I only",
+      "start": 57.747252,
+      "end": 64.591336,
+      "challengeIds": []
+    },
+    {
+      "BN": "நான் நீயா நெஞ்சம் சொன்னதே",
+      "EN": "Naan neeya nenjam sonnathae",
+      "correctOrder": ["My", "heart", "told", "me", "that", "I", "am", "yours"],
+      "alternative": [[]],
+      "trivia": "Naan: I, Neeya: yours, Nenjam: heart, sonnathae: told",
+      "start": 64.591336,
+      "end": 70.535849,
+      "challengeIds": []
+    },
+    {
+      "BN": "ரங்கோ ரங்கோலி கோலங்கள் நீ போட்டாய்",
+      "EN": "Rango rangoli kolangal nee pottai",
+      "correctOrder": ["The", "Rangoli", "patterns", "you", "drew"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 85.102707,
+      "end": 91.583678,
+      "challengeIds": []
+    },
+    {
+      "BN": "கோலம் போட்டவள் கைகள் வாழி",
+      "EN": "Kolam pottaval kaigal vaazhi",
+      "correctOrder": [
+        "the",
+        "hands",
+        "that",
+        "drew",
+        "the",
+        "Rangoli,",
+        "may",
+        "they",
+        "live",
+        "long"
+      ],
+      "alternative": [
+        [
+          "may",
+          "the",
+          "hands",
+          "that",
+          "drew",
+          "the",
+          "Rangoli,",
+          "they",
+          "live",
+          "long"
+        ]
+      ],
+      "trivia": "Kai is hand, Kaigal is hands.\nKolam (or pattern) refers to the Rangoli.\nKolam pottaval kaigal means the hands that drew the Rangoli.\nVaazhi comes from the toot Vazh meaning to live, vaazhi means may it live",
+      "start": 91.583678,
+      "end": 95.186265,
+      "challengeIds": []
+    },
+    {
+      "BN": "வளையல் சத்தம் ஜல் ஜல்",
+      "EN": "Valaiyyal sattham Jal Jal",
+      "correctOrder": ["with", "bangles", "making", "sound", "jal-jal"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 95.186265,
+      "end": 98.317272,
+      "challengeIds": []
+    },
+    {
+      "BN": "பூ வைத்தாய் பூ வைத்தாய்",
+      "EN": "Poo vaithaai poo vaithaai",
+      "correctOrder": ["you", "decorate", "me", "with", "flowers"],
+      "alternative": [[]],
+      "trivia": "Poo (flower) vaithai (you placed)",
+      "start": 123.167677,
+      "end": 127.159468,
+      "challengeIds": []
+    },
+    {
+      "BN": "நீ பூவைக்கோர் பூ வைத்தாய்",
+      "EN": "Nee poovaikor poo vaithaai",
+      "correctOrder": [
+        "you",
+        "decorated",
+        "a",
+        "flower",
+        "with",
+        "a",
+        "flower"
+      ],
+      "alternative": [[]],
+      "trivia": "Nee (you)\nPoovaikor (for a flower)\nPoo vaithai (placed a flower)",
+      "start": 127.159468,
+      "end": 130.200245,
+      "challengeIds": []
+    },
+    {
+      "BN": "மண பூவைத்து பூ வைத்து பூவைக்குள் தீ வைத்தாய் ஓ ஓ",
+      "EN": "Mana poovaithu poovaithu Poovaikkul thee vaithaai oohh ohh",
+      "correctOrder": ["inside", "the", "flower", "you", "put", "a", "fire"],
+      "alternative": [["you", "put", "a", "fire", "inside", "the", "flower"]],
+      "trivia": "Mana poovaithu poovaithu is a continuation of the last line \"placed a fragrant flower\"\nPoovaikkul (inside the flower) thee (fire) vaithaai (you placed)",
+      "start": 130.200245,
+      "end": 137.298512,
+      "challengeIds": []
+    },
+    {
+      "BN": "நீ நீ நீ மழையில் ஆட",
+      "EN": "Nee nee nee mazhaiyil aada",
+      "correctOrder": ["you", "play", "in", "the", "rain"],
+      "alternative": [[]],
+      "trivia": "Mazha means rain, mazhayil is in rain",
+      "start": 137.408953,
+      "end": 140.444302,
+      "challengeIds": []
+    },
+    {
+      "BN": "நான் நான் நான் நனைந்தே வாட",
+      "EN": "Naan naan naan nanainthae vaada",
+      "correctOrder": ["I", "get", "drenched", "and", "wither", "away"],
+      "alternative": [[]],
+      "trivia": "Naan (I) nanainthae (gotten drenched) vaada (wither away)",
+      "start": 140.444302,
+      "end": 143.896272,
+      "challengeIds": []
+    },
+    {
+      "BN": "என் நாளத்தில் உன் ரத்தம் நாடிக்குள் உன் சத்தம் உயிரே ஓ ஹோ",
+      "EN": "En naanathil un ratham Naadikkul un satham Uyire ohoooo",
+      "correctOrder": [
+        "your",
+        "blood",
+        "is",
+        "in",
+        "my",
+        "veins,",
+        "your",
+        "sound",
+        "is",
+        "in",
+        "my",
+        "pulse,",
+        "oh",
+        "my",
+        "life"
+      ],
+      "alternative": [
+        [
+          "your",
+          "blood",
+          "is",
+          "in",
+          "my",
+          "pulse,",
+          "your",
+          "sound",
+          "is",
+          "in",
+          "my",
+          "veins,",
+          "oh",
+          "my",
+          "life"
+        ]
+      ],
+      "trivia": "En (my) Naanathil (in blood vessel) un (your) ratham (blood)\nNaadikul (in my pulse) un (your) sattham (sound)",
+      "start": 143.896272,
+      "end": 151.104651,
+      "challengeIds": []
+    }
+  ],
+  "language": "Tamil",
+  "challenges": []
+}

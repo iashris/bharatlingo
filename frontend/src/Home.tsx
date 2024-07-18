@@ -54,6 +54,13 @@ const content = [
     difficulty: "medium",
     language: "Marathi",
   },
+  {
+    key: "munbe",
+    title: "Munbe Vaa",
+    id: "UPQZ4vuvW2s",
+    difficulty: "hard",
+    language: "Tamil",
+  },
 ];
 
 export const Home = () => {
@@ -62,7 +69,7 @@ export const Home = () => {
     <div className="bg-gray-100 p-4 md:p-8 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <Title level={2} className="mb-12 text-center">
-          BharatLingo | Bengali
+          BharatLingo
         </Title>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
           {content.map((item) => (
