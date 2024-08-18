@@ -1,6 +1,6 @@
-import React from "react";
 import { Card, Tag, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
+import { Footer, Header } from "./components/Common";
 
 const { Title } = Typography;
 
@@ -66,46 +66,50 @@ const content = [
 export const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-gray-100 p-4 md:p-8 min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        <Title level={2} className="mb-12 text-center">
-          BharatLingo
-        </Title>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
-          {content.map((item) => (
-            <Card
-              key={item.key}
-              hoverable
-              cover={
-                <img
-                  alt={item.title}
-                  src={`https://img.youtube.com/vi/${item.id}/mqdefault.jpg`}
-                  className="w-full object-cover"
-                />
-              }
-              className="w-full"
-              onClick={() => navigate(`/song?id=${item.key}`)}
-            >
-              <Card.Meta title={item.title} />
-              <Tag
-                className="mt-2 text-xs"
-                color={
-                  item.difficulty === "easy"
-                    ? "green"
-                    : item.difficulty === "medium"
-                    ? "orange"
-                    : "red"
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow bg-gray-100 p-4 md:p-8">
+        <div className="max-w-6xl mx-auto">
+          <Title level={3} className="mb-8 text-center">
+            Explore Indian Languages Through Music
+          </Title>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
+            {content.map((item) => (
+              <Card
+                key={item.key}
+                hoverable
+                cover={
+                  <img
+                    alt={item.title}
+                    src={`https://img.youtube.com/vi/${item.id}/mqdefault.jpg`}
+                    className="w-full object-cover"
+                  />
                 }
+                className="w-full"
+                onClick={() => navigate(`/song?id=${item.key}`)}
               >
-                {item.difficulty}
-              </Tag>
-              <Tag className="mt-2 text-xs" color="blue">
-                {item.language || "Bengali"}
-              </Tag>
-            </Card>
-          ))}
+                <Card.Meta title={item.title} />
+                <Tag
+                  className="mt-2 text-xs"
+                  color={
+                    item.difficulty === "easy"
+                      ? "green"
+                      : item.difficulty === "medium"
+                      ? "orange"
+                      : "red"
+                  }
+                >
+                  {item.difficulty}
+                </Tag>
+                <Tag className="mt-2 text-xs" color="blue">
+                  {item.language || "Bengali"}
+                </Tag>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };

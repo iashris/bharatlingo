@@ -9,7 +9,6 @@ import YouTube, { YouTubeEvent, YouTubePlayer } from "react-youtube";
 import { MinimalYouTubeSectionPlayerProps } from "../types/common";
 import { convertTimeToSeconds } from "../helpers";
 
-const isLocalhost = window.location.hostname === "localhost";
 const isMobile = false;
 // /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -110,16 +109,9 @@ const MinimalYouTubeSectionPlayer = forwardRef<
           videoId={videoId}
           opts={opts}
           onReady={onReady}
-          className={isLocalhost ? null : "pointer-events-none"}
+          className={"pointer-events-none"}
         />
       </div>
-      {/* {!showIntroduction && (
-        <Button
-          size="large"
-          icon={<PlayCircleOutlined />}
-          onClick={playSection}
-        />
-      )} */}
     </div>
   );
 });

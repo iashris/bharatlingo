@@ -13,6 +13,7 @@ import { Input, Button, Space, Form } from "antd";
 import { Annotation } from "./types";
 import Sanscript from "@indic-transliteration/sanscript";
 import ChallengeEditor from "./ChallengeEditor";
+import { Header } from "../Common";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -132,7 +133,7 @@ const YouTubeAnnotation: React.FC = () => {
   const handleVideoIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const url = e.target.value;
     const id = url.split("v=")[1];
-    setVideoId(id);
+    setVideoId(id || "");
   };
 
   const onInputChange = (
@@ -350,248 +351,260 @@ const YouTubeAnnotation: React.FC = () => {
   const isEditing = editingIndex !== null;
 
   return (
-    <div className="flex flex-col md:flex-row p-4">
-      <div className="w-full md:w-1/2 pr-4">
-        <Select
-          style={{ width: 200 }}
-          value={selectedLanguage.code}
-          onChange={handleLanguageChange}
-          className="mb-4"
-        >
-          {LANGUAGES.map((lang) => (
-            <Select.Option key={lang.code} value={lang.code}>
-              {lang.name}
-            </Select.Option>
-          ))}
-        </Select>
-        <Input
-          placeholder="Enter YouTube URL"
-          onChange={handleVideoIdChange}
-          value={`https://www.youtube.com/watch?v=${videoId}`}
-          className="mb-4"
-        />
-        {videoId && (
-          <YouTube
-            videoId={videoId}
-            opts={{ height: "390", width: "640" }}
-            onReady={onReady}
+    <>
+      <Header />
+      <div className="flex flex-col md:flex-row p-4">
+        <div className="w-full md:w-1/2 pr-4">
+          <Select
+            style={{ width: 200 }}
+            value={selectedLanguage.code}
+            onChange={handleLanguageChange}
+            className="mb-4"
+          >
+            {LANGUAGES.map((lang) => (
+              <Select.Option key={lang.code} value={lang.code}>
+                {lang.name}
+              </Select.Option>
+            ))}
+          </Select>
+          <Input
+            placeholder="Enter YouTube URL"
+            onChange={handleVideoIdChange}
+            value={`https://www.youtube.com/watch?v=${videoId}`}
+            className="mb-4"
           />
-        )}
-        <Input
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="mt-4"
-        />
-        <TextArea
-          placeholder="Enter introduction"
-          value={introduction}
-          onChange={(e) => setIntroduction(e.target.value)}
-          className="mt-4"
-          rows={4}
-        />
-        <Space className="mt-4">
-          <Button
-            type="primary"
-            icon={<DownloadOutlined />}
-            onClick={() =>
-              downloadJson(
-                name,
-                annotations,
-                videoId,
-                introduction,
-                selectedLanguage.name,
-                challenges
-              )
-            }
-          >
-            Download JSON
-          </Button>
-          <Upload
-            accept=".json"
-            showUploadList={false}
-            customRequest={({ file, onSuccess }: any) => {
-              setTimeout(() => {
-                onSuccess("ok", file);
-              }, 0);
-            }}
-            onChange={handleUpload}
-          >
-            <Button icon={<UploadOutlined />}>Upload JSON</Button>
-          </Upload>
-        </Space>
-      </div>
-      <div className="w-full md:w-1/2 pl-4">
-        <Tabs activeKey={activeTab} onChange={setActiveTab}>
-          <TabPane tab="Edit Annotation" key="1">
-            <Form layout="vertical">
-              <Form.Item label="Start Time:">
-                <Space>
-                  <Input
-                    value={currentAnnotation.start.toFixed(2)}
-                    onChange={onInputChange}
-                    name="start"
-                  />
-                  <Button onClick={() => onSetTime("start")}>
-                    Set Current Time
-                  </Button>
-                  <Button onClick={() => onGoToTime("start")}>
-                    Go to time
-                  </Button>
-                </Space>
-              </Form.Item>
-              <Form.Item label="End Time:">
-                <Space>
-                  <Input
-                    value={currentAnnotation.end.toFixed(2)}
-                    onChange={onInputChange}
-                    name="end"
-                  />
-                  <Button onClick={() => onSetTime("end")}>
-                    Set Current Time
-                  </Button>
-                  <Button onClick={() => onGoToTime("end")}>Go to time</Button>
-                </Space>
-              </Form.Item>
-              <Form.Item label={selectedLanguage.name + ":"}>
-                <Space>
-                  <Input
-                    value={currentAnnotation.BN}
-                    onChange={onInputChange}
-                    name="BN"
-                    style={{ width: "300px" }}
-                  />
-                  {selectedLanguage.voice ? (
-                    <Button onClick={handleRecordingToggle}>
-                      {isRecording ? "Stop Recording" : "Start Recording"}
+          {videoId && (
+            <YouTube
+              videoId={videoId}
+              opts={{ height: "390", width: "640" }}
+              onReady={onReady}
+            />
+          )}
+          <Input
+            placeholder="Enter song title"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="mt-4"
+          />
+          <TextArea
+            placeholder="Song description"
+            value={introduction}
+            onChange={(e) => setIntroduction(e.target.value)}
+            className="mt-4"
+            rows={4}
+          />
+          <Space className="mt-4">
+            <Button
+              type="primary"
+              icon={<DownloadOutlined />}
+              onClick={() =>
+                downloadJson(
+                  name,
+                  annotations,
+                  videoId,
+                  introduction,
+                  selectedLanguage.name,
+                  challenges
+                )
+              }
+            >
+              Download JSON
+            </Button>
+            <Upload
+              accept=".json"
+              showUploadList={false}
+              customRequest={({ file, onSuccess }: any) => {
+                setTimeout(() => {
+                  onSuccess("ok", file);
+                }, 0);
+              }}
+              onChange={handleUpload}
+            >
+              <Button icon={<UploadOutlined />}>Upload JSON</Button>
+            </Upload>
+          </Space>
+          <div className="text-sm mt-4 text-gray-500">
+            You can contribute to BharatLingo by sending annotated video jsons
+            to hello@iashris.com
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 pl-4">
+          <Tabs activeKey={activeTab} onChange={setActiveTab}>
+            <TabPane tab="Edit Annotation" key="1">
+              <Form layout="vertical">
+                <Form.Item label="Start Time:">
+                  <Space>
+                    <Input
+                      value={currentAnnotation.start.toFixed(2)}
+                      onChange={onInputChange}
+                      name="start"
+                    />
+                    <Button onClick={() => onSetTime("start")}>
+                      Set Current Time
                     </Button>
-                  ) : null}
-                </Space>
-              </Form.Item>
-              <Form.Item label="Transliteration:">
-                <Space>
+                    <Button onClick={() => onGoToTime("start")}>
+                      Go to time
+                    </Button>
+                  </Space>
+                </Form.Item>
+                <Form.Item label="End Time:">
+                  <Space>
+                    <Input
+                      value={currentAnnotation.end.toFixed(2)}
+                      onChange={onInputChange}
+                      name="end"
+                    />
+                    <Button onClick={() => onSetTime("end")}>
+                      Set Current Time
+                    </Button>
+                    <Button onClick={() => onGoToTime("end")}>
+                      Go to time
+                    </Button>
+                  </Space>
+                </Form.Item>
+                <Form.Item label={selectedLanguage.name + ":"}>
+                  <Space>
+                    <Input
+                      value={currentAnnotation.BN}
+                      onChange={onInputChange}
+                      name="BN"
+                      style={{ width: "300px" }}
+                    />
+                    {selectedLanguage.voice ? (
+                      <Button onClick={handleRecordingToggle}>
+                        {isRecording ? "Stop Recording" : "Start Recording"}
+                      </Button>
+                    ) : null}
+                  </Space>
+                </Form.Item>
+                <Form.Item label="Transliteration:">
+                  <Space>
+                    <Input
+                      value={currentAnnotation.EN}
+                      onChange={onInputChange}
+                      name="EN"
+                      style={{ width: "300px" }}
+                    />
+                    <Button onClick={onTransliterate}>Transliterate</Button>
+                  </Space>
+                </Form.Item>
+                <Form.Item label="Correct Order (space-separated):">
                   <Input
-                    value={currentAnnotation.EN}
+                    value={currentAnnotation.correctOrder.join(" ")}
                     onChange={onInputChange}
-                    name="EN"
-                    style={{ width: "300px" }}
-                  />
-                  <Button onClick={onTransliterate}>Transliterate</Button>
-                </Space>
-              </Form.Item>
-              <Form.Item label="Correct Order (space-separated):">
-                <Input
-                  value={currentAnnotation.correctOrder.join(" ")}
-                  onChange={onInputChange}
-                  name="correctOrder"
-                />
-              </Form.Item>
-              {currentAnnotation.alternative.map((alt, index) => (
-                <Form.Item
-                  key={index}
-                  label={`Alternative Order ${index + 1} (space-separated):`}
-                >
-                  <Input
-                    value={alt.join(" ")}
-                    onChange={(e) => onAlternativeChange(index, e.target.value)}
+                    name="correctOrder"
                   />
                 </Form.Item>
-              ))}
-              <Button onClick={onAddAlternative} icon={<PlusOutlined />}>
-                Add Another Alternative
-              </Button>
-              <Form.Item label="Trivia:">
-                <TextArea
-                  value={currentAnnotation.trivia}
-                  onChange={onInputChange}
-                  name="trivia"
-                  rows={4}
-                />
-              </Form.Item>
-              <Form.Item label="Associated Challenges">
-                <Select
-                  mode="multiple"
-                  placeholder="Select associated challenges"
-                  value={currentAnnotation.challengeIds || []}
-                  onChange={(selectedIds) =>
-                    setCurrentAnnotation((prev) => ({
-                      ...prev,
-                      challengeIds: selectedIds,
-                    }))
-                  }
-                >
-                  {challenges.map((challenge) => (
-                    <Select.Option key={challenge.id} value={challenge.id}>
-                      {challenge.type === "mcq"
-                        ? challenge.question
-                        : challenge.prompt}
-                    </Select.Option>
-                  ))}
-                </Select>
-              </Form.Item>
+                {currentAnnotation.alternative.map((alt, index) => (
+                  <Form.Item
+                    key={index}
+                    label={`Alternative Order ${index + 1} (space-separated):`}
+                  >
+                    <Input
+                      value={alt.join(" ")}
+                      onChange={(e) =>
+                        onAlternativeChange(index, e.target.value)
+                      }
+                    />
+                  </Form.Item>
+                ))}
+                <Button onClick={onAddAlternative} icon={<PlusOutlined />}>
+                  Add Another Alternative
+                </Button>
+                <Form.Item label="Trivia:">
+                  <TextArea
+                    value={currentAnnotation.trivia}
+                    onChange={onInputChange}
+                    name="trivia"
+                    rows={4}
+                  />
+                </Form.Item>
+                <Form.Item label="Associated Challenges">
+                  <Select
+                    mode="multiple"
+                    placeholder="Select associated challenges"
+                    value={currentAnnotation.challengeIds || []}
+                    onChange={(selectedIds) =>
+                      setCurrentAnnotation((prev) => ({
+                        ...prev,
+                        challengeIds: selectedIds,
+                      }))
+                    }
+                  >
+                    {challenges.map((challenge) => (
+                      <Select.Option key={challenge.id} value={challenge.id}>
+                        {challenge.type === "mcq"
+                          ? challenge.question
+                          : challenge.prompt}
+                      </Select.Option>
+                    ))}
+                  </Select>
+                </Form.Item>
 
-              <Button
-                onClick={onSubmit}
-                type="primary"
-                className="bg-green-600 text-white"
-              >
-                {isEditing ? "Update Annotation" : "Add Annotation"}
-              </Button>
-            </Form>
-          </TabPane>
-          <TabPane tab="Annotations List" key="2">
-            {annotations.map((annotation, index) => (
-              <div
-                key={index}
-                className={`mb-2 p-2 rounded cursor-pointer hover:bg-gray-100`}
-                onClick={() => handleAnnotationClick(index)}
-              >
-                <div className="flex justify-between items-start">
-                  <Text>
-                    {annotation.BN} - {annotation.EN} - Correct:{" "}
-                    {annotation.correctOrder.join(", ")} - Alt:{" "}
-                    {/* {annotation.alternative
+                <Button
+                  onClick={onSubmit}
+                  type="primary"
+                  className="bg-green-600 text-white"
+                >
+                  {isEditing ? "Update Annotation" : "Add Annotation"}
+                </Button>
+              </Form>
+            </TabPane>
+            <TabPane tab="Annotations List" key="2">
+              {annotations.map((annotation, index) => (
+                <div
+                  key={index}
+                  className={`mb-2 p-2 rounded cursor-pointer hover:bg-gray-100`}
+                  onClick={() => handleAnnotationClick(index)}
+                >
+                  <div className="flex justify-between items-start">
+                    <Text>
+                      {annotation.BN} - {annotation.EN} - Correct:{" "}
+                      {annotation.correctOrder.join(", ")} - Alt:{" "}
+                      {/* {annotation.alternative
                       .map((alt) => alt.join(", "))
                       .join(" | ")}{" "} */}
-                    - Trivia: {annotation.trivia}({annotation.start.toFixed(2)}{" "}
-                    - {annotation.end.toFixed(2)})
-                  </Text>
-                  <Space>
-                    <Tooltip title="Insert">
-                      <Button
-                        icon={<PlusOutlined />}
-                        size="small"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleInsertAnnotation(index);
-                        }}
-                      />
-                    </Tooltip>
-                    <Tooltip title="Delete">
-                      <Button
-                        icon={<DeleteOutlined />}
-                        size="small"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDeleteAnnotation(index);
-                        }}
-                      />
-                    </Tooltip>
-                  </Space>
+                      - Trivia: {annotation.trivia}(
+                      {annotation.start.toFixed(2)} -{" "}
+                      {annotation.end.toFixed(2)})
+                    </Text>
+                    <Space>
+                      <Tooltip title="Insert">
+                        <Button
+                          icon={<PlusOutlined />}
+                          size="small"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleInsertAnnotation(index);
+                          }}
+                        />
+                      </Tooltip>
+                      <Tooltip title="Delete">
+                        <Button
+                          icon={<DeleteOutlined />}
+                          size="small"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDeleteAnnotation(index);
+                          }}
+                        />
+                      </Tooltip>
+                    </Space>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </TabPane>
-          <TabPane tab="Challenges" key="3">
-            <ChallengeEditor
-              challenges={challenges}
-              onChallengeChange={setChallenges}
-              isSpeechEnabled={selectedLanguage.voice === 1}
-            />
-          </TabPane>
-        </Tabs>
+              ))}
+            </TabPane>
+            <TabPane tab="Challenges" key="3">
+              <ChallengeEditor
+                challenges={challenges}
+                onChallengeChange={setChallenges}
+                isSpeechEnabled={selectedLanguage.voice === 1}
+              />
+            </TabPane>
+          </Tabs>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

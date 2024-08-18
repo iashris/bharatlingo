@@ -7,6 +7,7 @@ import { convertTimeToSeconds } from "../helpers";
 import Lottie from "lottie-react";
 import congratsAnimation from "../assets/congrats.json";
 import { useNavigate } from "react-router-dom";
+import { Header } from "./Common";
 
 const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   song: songObject,
@@ -78,42 +79,44 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
   );
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 md:px-6 md:py-24 pb-4 max-sm:h-screen bg-white rounded-lg shadow-md">
-      <YouTubeSectionPlayer
-        start={convertTimeToSeconds(song[currentLineIndex].start)}
-        end={convertTimeToSeconds(song[currentLineIndex].end)}
-        videoId={videoId}
-        ref={playerRef}
-        showIntroduction={showIntroduction}
-      />
-      <div className="max-w-xl mx-auto">
-        <Progress
-          percent={progress}
-          showInfo={false}
-          size="small"
-          status="active"
+    <>
+      <Header />
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6 md:py-24 pb-4 max-sm:h-screen bg-white rounded-lg shadow-md">
+        <YouTubeSectionPlayer
+          start={convertTimeToSeconds(song[currentLineIndex].start)}
+          end={convertTimeToSeconds(song[currentLineIndex].end)}
+          videoId={videoId}
+          ref={playerRef}
+          showIntroduction={showIntroduction}
         />
-      </div>
-      {showIntroduction ? (
-        <div className="mt-6">
-          <h2 className="text-xl font-semibold mb-4">About this song</h2>
-          <p className="mb-4">{introduction}</p>
-          <Button onClick={handleNext} className="w-full">
-            Begin
-          </Button>
-        </div>
-      ) : (
-        <>
-          <LanguageLearningComponent
-            key={currentLineIndex}
-            title={song[currentLineIndex]}
-            correctOrder={song[currentLineIndex].correctOrder}
-            alternative={song[currentLineIndex].alternative}
-            trivia={song[currentLineIndex].trivia}
-            onComplete={() => handleComplete(currentLineIndex)}
-            onSubmit={updateScore}
+        <div className="max-w-xl mx-auto">
+          <Progress
+            percent={progress}
+            showInfo={false}
+            size="small"
+            status="active"
           />
-          {/* <div className="flex justify-between mt-6">
+        </div>
+        {showIntroduction ? (
+          <div className="mt-6">
+            <h2 className="text-xl font-semibold mb-4">About this song</h2>
+            <p className="mb-4">{introduction}</p>
+            <Button onClick={handleNext} className="w-full">
+              Begin
+            </Button>
+          </div>
+        ) : (
+          <>
+            <LanguageLearningComponent
+              key={currentLineIndex}
+              title={song[currentLineIndex]}
+              correctOrder={song[currentLineIndex].correctOrder}
+              alternative={song[currentLineIndex].alternative}
+              trivia={song[currentLineIndex].trivia}
+              onComplete={() => handleComplete(currentLineIndex)}
+              onSubmit={updateScore}
+            />
+            {/* <div className="flex justify-between mt-6">
             <Button
               icon={<LeftOutlined />}
               onClick={handlePrevious}
@@ -128,55 +131,59 @@ const SongTeacher: React.FC<{ song: YouTubeFillBlanksActivity }> = ({
               }
             />
           </div> */}
-        </>
-      )}
-      <Modal
-        open={isModalVisible}
-        onOk={closeModal}
-        onCancel={closeModal}
-        footer={null}
-        className="congratulatory-modal"
-      >
-        <div className="text-center">
-          <Lottie
-            animationData={congratsAnimation}
-            loop={true}
-            style={{ width: 200, height: 200, margin: "0 auto" }}
-          />
-          <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
-          <p className="mb-4">You've completed the entire song!</p>
-          <div className="mt-4">
-            <p className="font-semibold">Your Score:</p>
-            <div className="flex justify-center space-x-4 mt-2">
-              <div className="text-green-500">
-                <span className="font-bold">
-                  {(100 * (1 - score.incorrect / score.correct)).toFixed(2) +
-                    "%"}
-                </span>
+          </>
+        )}
+        <Modal
+          open={isModalVisible}
+          onOk={closeModal}
+          onCancel={closeModal}
+          footer={null}
+          className="congratulatory-modal"
+        >
+          <div className="text-center">
+            <Lottie
+              animationData={congratsAnimation}
+              loop={true}
+              style={{ width: 200, height: 200, margin: "0 auto" }}
+            />
+            <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
+            <p className="mb-4">You've completed the entire song!</p>
+            <div className="mt-4">
+              <p className="font-semibold">Your Score:</p>
+              <div className="flex justify-center space-x-4 mt-2">
+                <div className="text-green-500">
+                  <span className="font-bold">
+                    {(100 * (1 - score.incorrect / score.correct)).toFixed(2) +
+                      "%"}
+                  </span>
+                </div>
               </div>
             </div>
+            <div className="mt-6 flex justify-center">
+              <Button
+                type="primary"
+                className="mr-2"
+                onClick={() => navigate("/")}
+              >
+                Go Home
+              </Button>
+              <Button
+                onClick={() =>
+                  window
+                    .open(
+                      `https://www.youtube.com/watch?v=${videoId}`,
+                      "_blank"
+                    )
+                    ?.focus()
+                }
+              >
+                Watch video on YouTube
+              </Button>
+            </div>
           </div>
-          <div className="mt-6 flex justify-center">
-            <Button
-              type="primary"
-              className="mr-2"
-              onClick={() => navigate("/")}
-            >
-              Go Home
-            </Button>
-            <Button
-              onClick={() =>
-                window
-                  .open(`https://www.youtube.com/watch?v=${videoId}`, "_blank")
-                  ?.focus()
-              }
-            >
-              Watch video on YouTube
-            </Button>
-          </div>
-        </div>
-      </Modal>
-    </div>
+        </Modal>
+      </div>
+    </>
   );
 };
 
