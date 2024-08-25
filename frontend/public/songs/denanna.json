@@ -1,0 +1,122 @@
+{
+  "name": "Dennana Dennana",
+  "videoId": "aQI_5aV9v_0",
+  "introduction": "Dennana Dennana is a popular song from the blockbuster Kannada movie RangiTaranga. Lyrics of the song is in Tulu language which revolves around the fictional village of Kamarottu. A very similar song with same lyrics was also the title song for the serial Guddada Bhootha.",
+  "song": [
+    {
+      "BN": "ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನಿಯೆ",
+      "EN": "Dennana dennana, Dennana dennana, Dennana dennaniye",
+      "correctOrder": [
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennaniye"
+      ],
+      "alternative": [[]],
+      "trivia": "This song repeat the words \"Dennana Dennana\" which are from the Tulu epic poem of Siri Paadhdhana recited during Bhoota Kola.",
+      "start": 15,
+      "end": 28,
+      "challengeIds": []
+    },
+    {
+      "BN": "ತುಳುನಾಡ ಸೀಮೆಡ್ ಕಮರೊಟ್ಟು ಗ್ರಾಮೊಡು, ಗುಡ್ಡೇದ ಭೂತ ಉಂಡುಯೇ",
+      "EN": "Tulunada simed kamarottu gramodu, Gutteda Bhutavunduye",
+      "correctOrder": [
+        "In",
+        "Kamarottu",
+        "village",
+        "of",
+        "Tulu",
+        "Nadu,",
+        "lives",
+        "a",
+        "ghost",
+        "named",
+        "Gutteda",
+        "Bhoota"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 28,
+      "end": 42,
+      "challengeIds": []
+    },
+    {
+      "BN": "ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನಿಯೆ",
+      "EN": "Dennana dennana, Dennana dennana, Dennana dennaniye",
+      "correctOrder": [
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennaniye"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 56,
+      "end": 83,
+      "challengeIds": []
+    },
+    {
+      "BN": "ಮಾಮಲ್ಲ ಭೂತದ ಕಾರ್ನಿಕಾ ತೂಲೆಯೇ, ಗುಡ್ಡೇದ ಭೂತ ಉಂಡುಯೇ",
+      "EN": "Mamalla bhutada karnika tuleye, Gutteda Bhutavunduye",
+      "correctOrder": [
+        "Look",
+        "at",
+        "the",
+        "miracles",
+        "performed",
+        "by",
+        "the",
+        "powerful",
+        "ghost,",
+        "There",
+        "is",
+        "a",
+        "ghost",
+        "in",
+        "the",
+        "hills."
+      ],
+      "alternative": [[]],
+      "trivia": "The name Gutteda Bhoota refers to a mysterious ghost who lives in the hills of Tulu Nadu.",
+      "start": 83,
+      "end": 105,
+      "challengeIds": []
+    },
+    {
+      "BN": "ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನ, ಡೆನ್ನಾನ ಡೆನ್ನಾನಿಯೆ... ತುಳುನಾಡ ಸೀಮೆಡ್ ಕಮರೊಟ್ಟು ಗ್ರಾಮೊಡು, ಗುಡ್ಡೇದ ಭೂತ ಉಂಡುಯೇ",
+      "EN": "Dennana dennana, Dennana dennana, Dennana dennaniye... Tulunada simed Kamarottu gramodu, Gutteda bhutavunduye",
+      "correctOrder": [
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennana,",
+        "Dennana",
+        "dennaniye...",
+        "In",
+        "Kamarottu",
+        "village",
+        "of",
+        "Tulu",
+        "Nadu,",
+        "lives",
+        "a",
+        "ghost",
+        "named",
+        "Gutteda",
+        "Bhoota"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 119.6,
+      "end": 163,
+      "challengeIds": []
+    }
+  ],
+  "language": "Tulu",
+  "challenges": []
+}

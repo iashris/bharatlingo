@@ -61,6 +61,20 @@ const content = [
     difficulty: "hard",
     language: "Tamil",
   },
+  {
+    key: "denanna",
+    title: "Dennanna Dennanna",
+    id: "aQI_5aV9v_0",
+    difficulty: "hard",
+    language: "Tulu",
+  },
+  {
+    key: "kadhi",
+    title: "Kadhi Te",
+    id: "VYdWSp8pIjg",
+    difficulty: "medium",
+    language: "Marathi",
+  },
 ];
 
 export const Home = () => {

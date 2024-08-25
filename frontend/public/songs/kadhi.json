@@ -1,0 +1,135 @@
+{
+  "name": "Kadhi Tu",
+  "videoId": "VYdWSp8pIjg",
+  "introduction": "\"Kadhi Tu\" by Hrishikesh Ranade is a song that beautifully captures the essence and experience of rain. Through its evocative lyrics, the song explores the various moods and emotions that rain can awaken within us.",
+  "song": [
+    {
+      "BN": "कधी तू… रिमझिम झरणारी बरसात",
+      "EN": "Kadhi tu… rimjhim jharanari barasat",
+      "correctOrder": [
+        "Sometimes",
+        "you",
+        "are",
+        "a",
+        "gentle,",
+        "drizzling",
+        "rain"
+      ],
+      "alternative": [[]],
+      "trivia": "कधी तू (Kadhi tu) = Sometimes you (\"are\")\n\nझरणारी (jharanari) means falling but is more associated with rain / water\n\nYou can also see the it is a similar word झरना (jharna) which means a small waterfall / stream",
+      "start": 15.928749,
+      "end": 23.526805,
+      "challengeIds": []
+    },
+    {
+      "BN": "कधी तू… चमचम करणारी चांदण्यात",
+      "EN": "Kadhi tu… chamcham karanari chandanyata",
+      "correctOrder": ["Sometimes", "you", "sparkle", "in", "the", "moonlight"],
+      "alternative": [[]],
+      "trivia": "चांदण्यात (chandanyata) = moonlight ",
+      "start": 23.724492,
+      "end": 31.494609,
+      "challengeIds": []
+    },
+    {
+      "BN": "कधी तू…",
+      "EN": "Kadhi tu…",
+      "correctOrder": ["Sometimes", "you"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 31.598916,
+      "end": 37.525323,
+      "challengeIds": []
+    },
+    {
+      "BN": " कोसळत्या धारा",
+      "EN": " kosalatya dhara",
+      "correctOrder": ["Cascading", "streams"],
+      "alternative": [[]],
+      "trivia": "Following up from the previous line कधी तू (Sometimes you \"are\" )\n\nThe following lines are all references he makes to his lover\n\nकोसळत्या  can also refer to heavy rains or \"raining like cats and dogs\"",
+      "start": 37.525323,
+      "end": 40.107188,
+      "challengeIds": []
+    },
+    {
+      "BN": "थैमान वारा",
+      "EN": "Thaimana vara",
+      "correctOrder": ["The", "wild", "storm"],
+      "alternative": [[]],
+      "trivia": "वारा (vara) actually means wind but with the word (थैमान) it means a wild storm ",
+      "start": 40.107188,
+      "end": 40.107188,
+      "challengeIds": []
+    },
+    {
+      "BN": "बिजलीची नक्षी अंबरात",
+      "EN": "Bijlichi nakshi ambarat",
+      "correctOrder": ["The", "lightning", "patterns", "in", "the", "sky"],
+      "alternative": [[]],
+      "trivia": "बिजली (Bijli) = lightning\nनक्षी (nakshi) = map/pattern, similar to the word नक्शा meaning map\nअंबर ( ambar ) = sky",
+      "start": 43.227304,
+      "end": 48.576462,
+      "challengeIds": []
+    },
+    {
+      "BN": "सळसळत्या लाटा",
+      "EN": "Salasalatya laata",
+      "correctOrder": ["The", "rippling", "waves"],
+      "alternative": [[]],
+      "trivia": "लाट ( laat) = wave\nलाटा (laata) = waves",
+      "start": 48.558,
+      "end": 50.643695,
+      "challengeIds": []
+    },
+    {
+      "BN": "भिजलेल्या वाटा",
+      "EN": "Bhizalelya vaata",
+      "correctOrder": ["The", "wet", "paths"],
+      "alternative": [[]],
+      "trivia": "भिजलेल्या (bhizalelya ) = wet /damp\n वाटा ( vaata) = paths\n वाट ( vaat) = path",
+      "start": 50.643695,
+      "end": 53.378294,
+      "challengeIds": []
+    },
+    {
+      "BN": "चिंब पावसाची ओली रात",
+      "EN": "Chimba pavasachi oli raat",
+      "correctOrder": ["The", "soaking", "wet", "night", "of", "rain"],
+      "alternative": [[]],
+      "trivia": "ओली (oli) = wet\nरात (raat) = night\nपावसाची ( paavasachi) = of the rain",
+      "start": 53.378294,
+      "end": 58.105192,
+      "challengeIds": []
+    },
+    {
+      "BN": "कधी तू… रिमझिम झरणारी बरसात",
+      "EN": "kadhi tu… rimjhim jharanari barasaat",
+      "correctOrder": [
+        "Sometimes",
+        "you",
+        "are",
+        "a",
+        "gentle,",
+        "drizzling",
+        "rain"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 58.105192,
+      "end": 65.982942,
+      "challengeIds": []
+    },
+    {
+      "BN": "कधी तू… चमचम करणारी चांदण्यात",
+      "EN": "Kadhi tu… chamcham karanari chandanyaat",
+      "correctOrder": ["Sometimes", "you", "sparkle", "in", "the", "moonlight"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 65.982942,
+      "end": 75.753365,
+      "challengeIds": []
+    }
+  ],
+  "language": "Marathi",
+  "challenges": []
+}
