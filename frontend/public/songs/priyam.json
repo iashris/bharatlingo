@@ -1,0 +1,324 @@
+{
+  "name": "Priyam Bharatam",
+  "videoId": "Vpv8eMlXuzM",
+  "introduction": "This Sanskrit song by Chandrabhanu Tripathi and sung by Gabriella Brunnel, beautifully captures the image of India, conveying feelings of love, courage and the devoted mind towards India, our motherland.",
+  "song": [
+    {
+      "BN": "प्रकृत्या सुरम्यं विशालं प्रकामम्",
+      "EN": "prakrritya suramyam vishalam prakamam",
+      "correctOrder": ["Enchanting", "landscape", "over", "vast", "territory"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 7,
+      "end": 17.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "सरित्तारहारैः ललामम् निकामम्",
+      "EN": "sarittaraharaih lalamam nikamam",
+      "correctOrder": [
+        "Adorned",
+        "by",
+        "beautiful",
+        "necklace",
+        "of",
+        "rivers",
+        "and",
+        "stars"
+      ],
+      "alternative": [
+        [
+          "Adorned",
+          "by",
+          "necklace",
+          "of",
+          "beautiful",
+          "rivers",
+          "and",
+          "stars"
+        ]
+      ],
+      "trivia": "",
+      "start": 17.5,
+      "end": 24.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "हिमाद्रिः ललाटे पदे चैव सिन्धुः",
+      "EN": "himadrih lalate pade chaiva sindhuh",
+      "correctOrder": [
+        "Crowned",
+        "by",
+        "Himalayas,",
+        "sea",
+        "at",
+        "her",
+        "feet"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 24.5,
+      "end": 30.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "प्रियं भारतं तत् सदा दर्शनीयम्",
+      "EN": "priyam bharatam tat sada darshaniyam",
+      "correctOrder": [
+        "beloved",
+        "india",
+        "is",
+        "in",
+        "every",
+        "way",
+        "spectacular"
+      ],
+      "alternative": [
+        ["in", "every", "way", "beloved", "india", "is", "spectacular"],
+        ["beloved", "india", "is", "spectacular", "in", "every", "way"]
+      ],
+      "trivia": "",
+      "start": 30.5,
+      "end": 45,
+      "challengeIds": []
+    },
+    {
+      "BN": "धनानां निधानं धरायां प्रधानम्",
+      "EN": "dhananam nidhanam dharayam pradhanam",
+      "correctOrder": [
+        "it",
+        "is",
+        "reservoir",
+        "of",
+        "wealth",
+        "and",
+        "prime",
+        "on",
+        "earth"
+      ],
+      "alternative": [
+        ["reservoir", "of", "wealth", "and", "prime", "on", "earth", "it", "is"]
+      ],
+      "trivia": "",
+      "start": 45,
+      "end": 56.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "इदं भारतं देवलोकेन तुल्यम्",
+      "EN": "idam bharatam devalokena tulyam",
+      "correctOrder": [
+        "This",
+        "India",
+        "is",
+        "equivalent",
+        "of",
+        "god's",
+        "abode"
+      ],
+      "alternative": [[]],
+      "trivia": "天竺 Tiānzhú (also Tenjiku in Japanese) is the ancient Chinese name of India. It literally means \"Heavenly\" or \"Celestial\" as said in the song.",
+      "start": 56.5,
+      "end": 63,
+      "challengeIds": []
+    },
+    {
+      "BN": "यशो यस्य शुभ्रं विदेशेषु गीतम्",
+      "EN": "yasho yasya shubhram videsheshu gitam",
+      "correctOrder": [
+        "ballads",
+        "of",
+        "her",
+        "fame",
+        "are",
+        "sung",
+        "in",
+        "foreign",
+        "lands"
+      ],
+      "alternative": [
+        [
+          "in",
+          "foreign",
+          "lands",
+          "ballads",
+          "of",
+          "her",
+          "fame",
+          "are",
+          "sung"
+        ]
+      ],
+      "trivia": "India has been mentioned in historical and religious books, throughout the world. Some noteworthy being Indica (Greece), Kitab al-Hind (Persia), Samguk Yusa (Korea), The Travels of Ibn Battuta (Africa) and many more!",
+      "start": 63,
+      "end": 69.7,
+      "challengeIds": []
+    },
+    {
+      "BN": "प्रियं भारतं तत् सदा पूजनीयम्",
+      "EN": "priyam bharatam tat sada pujaniyam",
+      "correctOrder": ["Beloved", "India", "is", "forever", "worshiped"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 69.7,
+      "end": 89.7,
+      "challengeIds": []
+    },
+    {
+      "BN": "अनेके प्रदेशा अनेके च वेषाः",
+      "EN": "aneke pradesha aneke cha veshah",
+      "correctOrder": ["Many", "states,", "Many", "dresses"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 89.7,
+      "end": 96,
+      "challengeIds": []
+    },
+    {
+      "BN": "अनेकानि रूपाणि भाषा अनेकाः",
+      "EN": "anekani rupani bhasha anekah",
+      "correctOrder": ["Many", "appearances,", "Many", "languages"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 96,
+      "end": 102,
+      "challengeIds": []
+    },
+    {
+      "BN": "परं यत्र सर्वे वयं भारतीयाः",
+      "EN": "param yatra sarve vayam bharatiyah",
+      "correctOrder": ["But", "still", "we", "all", "are", "Indians"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 102,
+      "end": 109,
+      "challengeIds": []
+    },
+    {
+      "BN": "प्रियं भारतं तत् सदा रक्षणीयम्",
+      "EN": "priyam bharatam tat sada rakshaniyam",
+      "correctOrder": [
+        "beloved",
+        "india",
+        "we",
+        "will",
+        "protect",
+        "you",
+        "forever"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 109,
+      "end": 128.502014874115,
+      "challengeIds": []
+    },
+    {
+      "BN": "सुधीरा जना यत्र युद्धेषु वीराः",
+      "EN": "sudhira jana yatra yuddheshu virah",
+      "correctOrder": [
+        "Where",
+        "people",
+        "are",
+        "wise",
+        "and",
+        "brave",
+        "in",
+        "battles"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 128.502014874115,
+      "end": 135,
+      "challengeIds": []
+    },
+    {
+      "BN": "शरीरार्पणेनापि रक्षन्ति देशम्",
+      "EN": "sharirarpanenapi rakshanti desham",
+      "correctOrder": [
+        "where",
+        "valiant",
+        "offer",
+        "their",
+        "bodies",
+        "to",
+        "protect",
+        "country"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 135,
+      "end": 141.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "स्वधर्मानुरक्ताः सुशीलाश्च नार्यः",
+      "EN": "svadharmanuraktah sushilashcha naryah",
+      "correctOrder": [
+        "Women",
+        "devoted",
+        "to",
+        "religion",
+        "and",
+        "well",
+        "behaved"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 141.5,
+      "end": 148,
+      "challengeIds": []
+    },
+    {
+      "BN": "प्रियं भारतं तत् सदा श्लाघनीयम्",
+      "EN": "priyam bharatam tat sada shlaghaniyam",
+      "correctOrder": ["Beloved", "India,", "forever", "praiseworthy"],
+      "alternative": [["Beloved", "India,", "praiseworthy", "forever"]],
+      "trivia": "",
+      "start": 148,
+      "end": 168,
+      "challengeIds": []
+    },
+    {
+      "BN": "वयं भारतीयाः स्वभूमिं नमामः",
+      "EN": "vayam bharatiyah svabhumim namamah",
+      "correctOrder": ["We", "Indians", "bow", "to", "our", "motherland"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 205.5019009294281,
+      "end": 212.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "परं धर्ममेकं सदा मानयामः",
+      "EN": "param dharmamekam sada manayamah",
+      "correctOrder": ["We", "always", "follow", "our", "religion"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 212.5,
+      "end": 219,
+      "challengeIds": []
+    },
+    {
+      "BN": "यदर्थं धनं जीवनं चार्पयामः",
+      "EN": "yadartham dhanam jivanam charpayamah",
+      "correctOrder": ["we", "offer", "our", "wealth", "and", "life"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 219,
+      "end": 226,
+      "challengeIds": []
+    },
+    {
+      "BN": "प्रियं भारतं तत् सदा वन्दनीयम्",
+      "EN": "priyam bharatam tat sada vandaniyam",
+      "correctOrder": ["Beloved", "India,", "respected", "forever"],
+      "alternative": [["Beloved", "India,", "respected", "forever"]],
+      "trivia": "",
+      "start": 226,
+      "end": 252.5,
+      "challengeIds": []
+    }
+  ],
+  "language": "Sanskrit",
+  "challenges": []
+}

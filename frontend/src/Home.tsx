@@ -75,6 +75,13 @@ const content = [
     difficulty: "medium",
     language: "Marathi",
   },
+  {
+    key: "priyam",
+    title: "Priyam Bharatam",
+    id: "Vpv8eMlXuzM",
+    difficulty: "medium",
+    language: "Sanskrit",
+  },
 ];
 
 export const Home = () => {
