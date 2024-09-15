@@ -1,0 +1,380 @@
+{
+  "name": "Vagyo Re Dhol",
+  "videoId": "sDZA54sTqwQ",
+  "introduction": "Gujarati song \"Vagyo Re Dhol\" portrays the women of Kutch going against the dominance of patriarchal society for performing Garba and enjoying the traditional dance of the state with gleaming hopes.",
+  "song": [
+    {
+      "BN": "હે વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ",
+      "EN": "he vagyo re dhola bai vagyo re dhola, vagyo re dhola bai vagyo re dhola",
+      "correctOrder": [
+        "Oh",
+        "women",
+        "the",
+        "drums",
+        "are",
+        "beating,",
+        "the",
+        "drums",
+        "are",
+        "beating"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 12.1,
+      "end": 25.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ મારા મીઠાનાં રણમાં વાગ્યો રે ઢોલ",
+      "EN": "vagyo re dhola bai vagyo re dhola mara mithana ranama vagyo re dhola",
+      "correctOrder": [
+        "Oh",
+        "women,",
+        "the",
+        "drums",
+        "are",
+        "beating",
+        "in",
+        "my",
+        "salt",
+        "desert"
+      ],
+      "alternative": [
+        [
+          "Oh",
+          "women,",
+          "in",
+          "my",
+          "salt",
+          "desert",
+          "the",
+          "drums",
+          "are",
+          "beating"
+        ]
+      ],
+      "trivia": "The salt desert signifies the Rann of Kutch. But digging deeper by the meaning, it also means the suffering state of women's mind (which is desert like)",
+      "start": 25.5,
+      "end": 32,
+      "challengeIds": []
+    },
+    {
+      "BN": "મારા મીઠાનાં રણમાં વાગ્યો રે ઢોલ",
+      "EN": "mara mithana ranama vagyo re dhola",
+      "correctOrder": [
+        "the",
+        "drums",
+        "are",
+        "beating",
+        "in",
+        "my",
+        "salt",
+        "desert"
+      ],
+      "alternative": [
+        ["in", "my", "salt", "desert", "the", "drums", "are", "beating"]
+      ],
+      "trivia": "",
+      "start": 32,
+      "end": 35.7,
+      "challengeIds": []
+    },
+    {
+      "BN": "પહોળું થયું ને પછી પહોળું થયું, પહોળું થયું ને પછી પહોળું થયું",
+      "EN": "paholu thayu ne pachi paholu thayu, paholu thayu ne pachi paholu thayu",
+      "correctOrder": [
+        "Oh",
+        "it",
+        "has",
+        "broadened,",
+        "Oh",
+        "it",
+        "has",
+        "broadened"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 35.7,
+      "end": 42,
+      "challengeIds": []
+    },
+    {
+      "BN": "એક સજ્જડ-બમ્મ પાંજરું પહોળું થયું (×2)",
+      "EN": "eka sajjada-bamma pamjaru paholu thayu (×2)",
+      "correctOrder": ["A", "tight", "cage", "has", "broadened"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 42,
+      "end": 56,
+      "challengeIds": []
+    },
+    {
+      "BN": "ઢોલ ઢોલ ઢોલ ઢોલ વાગ્યો, વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ",
+      "EN": "dhola dhola dhola dhola vagyo, vagyo re dhola bai vagyo re dhola vagyo re dhola bai vagyo re dhola",
+      "correctOrder": [
+        "the",
+        "drums",
+        "are",
+        "beating!",
+        "oh",
+        "women",
+        "the",
+        "drums",
+        "are",
+        "beating"
+      ],
+      "alternative": [
+        [
+          "oh",
+          "women",
+          "the",
+          "drums",
+          "are",
+          "beating!",
+          "the",
+          "drums",
+          "are",
+          "beating"
+        ]
+      ],
+      "trivia": "",
+      "start": 56,
+      "end": 76.5,
+      "challengeIds": []
+    },
+    {
+      "BN": "હાંફી ગઈ રે હું તો હાંફી ગઈ, અમથા હરખમાં જ હાંફી ગઈ",
+      "EN": "haphi gai re hum to haphi gai, amatha harakhama ja haphi gai",
+      "correctOrder": [
+        "I",
+        "was",
+        "breathless,",
+        "I",
+        "was",
+        "breathless",
+        "from",
+        "just",
+        "little",
+        "joy"
+      ],
+      "alternative": [
+        [
+          "I",
+          "was",
+          "breathless,",
+          "from",
+          "just",
+          "little",
+          "joy",
+          "I",
+          "was",
+          "breathless"
+        ]
+      ],
+      "trivia": "",
+      "start": 76.5,
+      "end": 83.3,
+      "challengeIds": []
+    },
+    {
+      "BN": "હાંફી ગઈ રે હું તો હાંફી ગઈ હાંફી ગઈ રે, સહેજ અમથા હરખમાં જ હાંફી ગઈ",
+      "EN": "haphi gai re hum to haphi gai haphi gai re, saheja amatha harakhama ja haphi gai",
+      "correctOrder": [
+        "I",
+        "was",
+        "breathless,",
+        "I",
+        "was",
+        "breathless",
+        "from",
+        "just",
+        "little",
+        "joy"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 83.3,
+      "end": 91.8,
+      "challengeIds": []
+    },
+    {
+      "BN": "સહેજ અમથા હરખમાં જ હાંફી ગઈ સહેજ અમથા હરખમાં જ હાંફી ગઈ",
+      "EN": "saheja amatha harakhama ja haphi gai saheja amatha harakhama ja haphi gai",
+      "correctOrder": [
+        "I",
+        "became",
+        "breathless",
+        "from",
+        "just",
+        "little",
+        "joy"
+      ],
+      "alternative": [
+        ["from", "just", "little", "joy", "I", "became", "breathless"]
+      ],
+      "trivia": "",
+      "start": 91.8,
+      "end": 106,
+      "challengeIds": []
+    },
+    {
+      "BN": "ઊંઘી જ નહિ તોય ઊંઘી જ નહિ, ઊંઘી જ નહિ તોય ઊંઘી જ નહિ",
+      "EN": "ughi ja nahi toya ughi ja nahi, ughi ja nahi toya ughi ja nahi",
+      "correctOrder": ["I", "didn't", "sleep,", "I", "didn't", "sleep"],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 127,
+      "end": 133,
+      "challengeIds": []
+    },
+    {
+      "BN": "થોડા સપના જોવા ને હાટુ ઊંઘી જ નહિ (×2)",
+      "EN": "thoda sapana jova ne hatu ughi ja nahi (×2)",
+      "correctOrder": [
+        "just",
+        "to",
+        "dream",
+        "a",
+        "little",
+        "I",
+        "didn't",
+        "sleep"
+      ],
+      "alternative": [
+        ["I", "didn't", "sleep", "just", "to", "dream", "a", "little"]
+      ],
+      "trivia": "",
+      "start": 133,
+      "end": 139.5040180705719,
+      "challengeIds": []
+    },
+    {
+      "BN": "હવે હવે હવે કાળો ટીકો રે એક કાળો ટીકો હવે કાળો ટીકો રે એક કાળો ટીકો",
+      "EN": "have have have kalo tiko re eka kalo tiko have kalo tiko re eka kalo tiko",
+      "correctOrder": [
+        "now,",
+        "now,",
+        "now",
+        "a",
+        "black",
+        "dot,",
+        "just",
+        "a",
+        "black",
+        "dot"
+      ],
+      "alternative": [[]],
+      "trivia": "Black dot signifies Kajal tika on cheeks, which keeps evil spirits away in popular Indian beliefs.",
+      "start": 139.5040180705719,
+      "end": 148.25,
+      "challengeIds": []
+    },
+    {
+      "BN": "મારા ઓરતાનાં ગાલ પર કાળો ટીકો (×2)",
+      "EN": "mara oratana gala para kalo tiko (×2)",
+      "correctOrder": [
+        "A",
+        "black",
+        "dot",
+        "on",
+        "cheek",
+        "of",
+        "my",
+        "hopes",
+        "and",
+        "dreams"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 148.25,
+      "end": 155.5014508550415,
+      "challengeIds": []
+    },
+    {
+      "BN": "વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ વાગ્યો રે ઢોલ બાઈ વાગ્યો રે ઢોલ",
+      "EN": "vagyo re dhola bai vagyo re dhola vagyo re dhola bai vagyo re dhola",
+      "correctOrder": [
+        "Oh",
+        "women",
+        "the",
+        "drums",
+        "are",
+        "beating",
+        "the",
+        "drums",
+        "are",
+        "beating"
+      ],
+      "alternative": [
+        [
+          "the",
+          "drums",
+          "are",
+          "beating",
+          "Oh",
+          "women",
+          "the",
+          "drums",
+          "are",
+          "beating"
+        ]
+      ],
+      "trivia": "",
+      "start": 155.5014508550415,
+      "end": 162,
+      "challengeIds": []
+    },
+    {
+      "BN": "મારા મીઠાનાં રણમાં વાગ્યો રે ઢોલ (×2)",
+      "EN": "mara mithana ranama vagyo re dhola (×2)",
+      "correctOrder": [
+        "the",
+        "drums",
+        "are",
+        "beating",
+        "in",
+        "my",
+        "salt",
+        "desert"
+      ],
+      "alternative": [
+        ["in", "my", "salt", "desert", "the", "drums", "are", "beating"]
+      ],
+      "trivia": "",
+      "start": 162,
+      "end": 168.6,
+      "challengeIds": []
+    },
+    {
+      "BN": "પહોળું થયું ને પછી પહોળું થયું (×2)",
+      "EN": "paholu thayu ne pachi paholu thayu (×2)",
+      "correctOrder": [
+        "Oh",
+        "it",
+        "has",
+        "broadened,",
+        "Oh",
+        "it",
+        "has",
+        "broadened"
+      ],
+      "alternative": [[]],
+      "trivia": "",
+      "start": 168.6,
+      "end": 174.8,
+      "challengeIds": []
+    },
+    {
+      "BN": "એક સજ્જડ-બમ્મ પાંજરું પહોળું થયું...",
+      "EN": "eka sajjada-bamma pamjaru paholu thayum...",
+      "correctOrder": ["A", "tight", "cage", "has", "broadened..."],
+      "alternative": [[]],
+      "trivia": "In the complete song, \"Broadened Cage\", \"Salt Desert\" etc. are compared to the women's mental state of suffering, but also shows how playing Garba helps them to cope up with any problems!",
+      "start": 174.8,
+      "end": 195.3,
+      "challengeIds": []
+    }
+  ],
+  "language": "Gujarati",
+  "challenges": []
+}

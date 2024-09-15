@@ -67,6 +67,7 @@ const content = [
     id: "aQI_5aV9v_0",
     difficulty: "hard",
     language: "Tulu",
+    contributor: "Parth Shelar",
   },
   {
     key: "kadhi",
@@ -74,6 +75,7 @@ const content = [
     id: "VYdWSp8pIjg",
     difficulty: "medium",
     language: "Marathi",
+    contributor: "Mihir Khadilkar",
   },
   {
     key: "priyam",
@@ -81,6 +83,15 @@ const content = [
     id: "Vpv8eMlXuzM",
     difficulty: "medium",
     language: "Sanskrit",
+    contributor: "Parth Shelar",
+  },
+  {
+    key: "bhagyo",
+    title: "Vagyo Re Dhol",
+    id: "sDZA54sTqwQ",
+    difficulty: "medium",
+    language: "Gujarati",
+    contributor: "Parth Shelar",
   },
 ];
 
@@ -125,6 +136,13 @@ export const Home = () => {
                 <Tag className="mt-2 text-xs" color="blue">
                   {item.language || "Bengali"}
                 </Tag>
+                <div>
+                  {item.contributor && (
+                    <div className="mt-2 text-xs italic">
+                      Contributed by {item.contributor}
+                    </div>
+                  )}
+                </div>
               </Card>
             ))}
           </div>
